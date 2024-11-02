@@ -1,8 +1,10 @@
+package View;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SoftwareMaintence extends JFrame{
+public class FrLogin extends JFrame{
     private JButton loginBtn;
     private JTextField emailField;
     private JPasswordField passwordField;
@@ -13,7 +15,7 @@ public class SoftwareMaintence extends JFrame{
     private JPanel panelMain;
     private JCheckBox cliientCheckBox;
 
-    public SoftwareMaintence() {
+    public FrLogin() {
         loginBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,7 +27,7 @@ public class SoftwareMaintence extends JFrame{
 
 
     public static void main(String[] args) {
-        SoftwareMaintence syst = new SoftwareMaintence();
+        FrLogin syst = new FrLogin();
         syst.setContentPane(syst.panelMain);
         syst.setTitle("Safe Software");
         syst.setSize(600, 400);
