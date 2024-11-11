@@ -10,4 +10,6 @@ public class FrCreateClient {
     private JTextField textField2;
     private JPasswordField passwordField1;
     private JTextField textField3;
+    private JRadioButton masculinoRadioButton;
+    private JRadioButton femininoRadioButton;
 }
