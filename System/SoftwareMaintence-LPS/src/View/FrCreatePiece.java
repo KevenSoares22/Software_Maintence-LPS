@@ -2,16 +2,17 @@ package View;
 
 import javax.swing.*;
 
-public class FrCreateClient {
+public class FrCreatePiece {
     private JPanel panelMain;
     private JButton fecharButton;
-    private JButton cadastrarButton1;
+    private JButton criarButton;
     private JTextField textField1;
     private JTextField textField2;
-    private JPasswordField passwordField1;
     private JTextField textField3;
-    private JRadioButton masculinoRadioButton;
-    private JRadioButton femininoRadioButton;
+    private JTextField textField4;
+    private JTextField textField5;
+    private JTextField textField6;
+    private JTextField textField7;
 
 
 
@@ -25,14 +26,13 @@ public class FrCreateClient {
 
 
 
-
-    public FrCreateClient() {
+    public FrCreatePiece() {
 
     }
 
 
     public static void main(String[] args) {
-        FrCreateClient syst = new FrCreateClient();
+        FrCreatePiece syst = new FrCreatePiece();
         syst.setContentPane(syst.panelMain);
         syst.setTitle("Safe Software");
         syst.setSize(600, 400);
