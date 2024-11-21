@@ -2,13 +2,13 @@ package View;
 
 import javax.swing.*;
 
-public class FrCreateFilial {
+public class FrCreateFilial extends JFrame {
     private JButton fecharButton;
     private JButton criarButton;
     private JTextField textField1;
     private JTextField textField2;
-    private JTextField textField3;
     private JPanel panelMain;
+    private JPasswordField passwordField1;
 
     public FrCreateFilial() {
 
