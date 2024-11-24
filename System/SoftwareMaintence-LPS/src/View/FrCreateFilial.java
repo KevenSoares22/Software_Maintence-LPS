@@ -5,9 +5,9 @@ import javax.swing.*;
 public class FrCreateFilial {
     private JButton fecharButton;
     private JButton criarButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
+    private JTextField nameField;
+    private JTextField placeField;
+    private JTextField passwordField;
     private JPanel panelMain;
 
     public FrCreateFilial() {
