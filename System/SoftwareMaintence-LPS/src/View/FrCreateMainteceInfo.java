@@ -4,11 +4,11 @@ import javax.swing.*;
 
 public class FrCreateMainteceInfo extends JFrame {
     private JPanel panelMain;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField6;
+    private JTextField titleField;
+    private JTextField clientIdField;
+    private JTextField descriptionField;
+    private JTextField timeField;
+    private JTextField priceField;
     private JButton fecharButton;
     private JButton criarButton;
 

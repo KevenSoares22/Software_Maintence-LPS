@@ -21,15 +21,17 @@
           <grid row="2" column="3" row-span="10" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
-      <component id="67c87" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="67c87" class="javax.swing.JTextField" binding="emailField">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="2f156" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="2f156" class="javax.swing.JTextField" binding="nameField">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -61,13 +63,15 @@
           <text value="Criar"/>
         </properties>
       </component>
-      <component id="35166" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="35166" class="javax.swing.JTextField" binding="idetityField">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="f38f6" class="javax.swing.JLabel">
         <constraints>
@@ -77,6 +81,7 @@
           <text value="Identificação"/>
         </properties>
       </component>
+
       <component id="411d4" class="javax.swing.JLabel">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -93,14 +98,17 @@
           <text value="Filial"/>
         </properties>
       </component>
-      <component id="15676" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+      <component id="15676" class="javax.swing.JTextField" binding="salaryField">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
+
       <component id="ad76f" class="javax.swing.JButton" binding="fecharButton" default-binding="true">
         <constraints>
           <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -118,12 +126,15 @@
         </properties>
       </component>
       <component id="34573" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="f6b4b" class="javax.swing.JPasswordField" binding="passwordField1" default-binding="true">
         <constraints>

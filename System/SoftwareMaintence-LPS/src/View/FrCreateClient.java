@@ -6,10 +6,10 @@ public class FrCreateClient {
     private JPanel panelMain;
     private JButton fecharButton;
     private JButton cadastrarButton1;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JPasswordField passwordField1;
-    private JTextField textField3;
+    private JTextField nameField;
+    private JTextField identityField;
+    private JPasswordField passwordField;
+    private JTextField emailField;
     private JRadioButton masculinoRadioButton;
     private JRadioButton femininoRadioButton;
 

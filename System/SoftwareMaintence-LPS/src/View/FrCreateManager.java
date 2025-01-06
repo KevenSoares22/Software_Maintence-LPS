@@ -6,12 +6,12 @@ public class FrCreateManager extends JFrame {
     private JPanel panelMain;
     private JButton criarButton;
     private JButton fecharButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JPasswordField passwordField1;
+    private JTextField emailField;
+    private JTextField nameField;
+    private JTextField idetityField;
+    private JTextField passwordField;
+    private JTextField salaryField;
+    private JPasswordField filialField;
 
     public FrCreateManager() {
     }

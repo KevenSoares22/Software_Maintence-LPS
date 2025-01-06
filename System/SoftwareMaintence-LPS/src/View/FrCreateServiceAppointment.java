@@ -6,11 +6,11 @@ public class FrCreateServiceAppointment extends JFrame {
     private JPanel panelMain;
     private JButton criarButton;
     private JButton fecharButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
+    private JTextField clientField;
+    private JTextField descriptionField;
+    private JTextField timeField;
+    private JTextField priceField;
+    private JTextField areaIdField;
 
     public FrCreateServiceAppointment() {
 

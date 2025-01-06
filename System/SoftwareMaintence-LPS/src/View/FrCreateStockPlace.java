@@ -5,10 +5,10 @@ import javax.swing.*;
 public class FrCreateStockPlace extends JFrame {
     private JButton fecharButton;
     private JButton criarButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
+    private JTextField placeField;
+    private JTextField spaceField;
     private JPanel panelMain;
+
 
     public FrCreateStockPlace() {
     }
