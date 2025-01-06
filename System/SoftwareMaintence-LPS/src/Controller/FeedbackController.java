@@ -1,5 +1,5 @@
 package Controller;
-
+import Controller.TableModels.TMFeedback;
 import Model.Entities.Feedback;
 import javax.swing.*;
 import java.util.ArrayList;
