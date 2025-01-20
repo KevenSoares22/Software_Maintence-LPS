@@ -2,19 +2,36 @@ package View;
 
 import javax.swing.*;
 
-public class FrCreateStockPlace {
+public class FrCreateStockPlace extends JFrame {
     private JButton fecharButton;
     private JButton criarButton;
     private JTextField placeField;
     private JTextField spaceField;
     private JPanel panelMain;
-    private JTextField filialField;
 
 
     public FrCreateStockPlace() {
-
     }
 
+    public JButton getFecharButton() {
+        return fecharButton;
+    }
+
+    public JButton getCriarButton() {
+        return criarButton;
+    }
+
+    public JTextField getTextField1() {
+        return textField1;
+    }
+
+    public JTextField getTextField2() {
+        return textField2;
+    }
+
+    public JTextField getTextField3() {
+        return textField3;
+    }
 
     public static void main(String[] args) {
         FrCreateStockPlace syst = new FrCreateStockPlace();
@@ -24,6 +41,6 @@ public class FrCreateStockPlace {
         syst.setVisible(true);
         syst.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
+        new Controller.FrCreateStockPlaceController(syst);
     }
 }

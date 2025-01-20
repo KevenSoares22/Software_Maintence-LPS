@@ -1,10 +1,8 @@
 package View;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class FrLogin extends JFrame{
+public class FrLogin extends JFrame {
     private JButton loginBtn;
     private JTextField emailField;
     private JPasswordField passwordField;
@@ -13,18 +11,25 @@ public class FrLogin extends JFrame{
     private JLabel passwordLabel;
     private JCheckBox clienteCheckBox;
     private JPanel panelMain;
-    private JCheckBox cliientCheckBox;
 
     public FrLogin() {
-        loginBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(loginBtn, "Hello ");
-            }
-        });
-
     }
 
+    public JButton getLoginBtn() {
+        return loginBtn;
+    }
+
+    public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public JCheckBox getClienteCheckBox() {
+        return clienteCheckBox;
+    }
 
     public static void main(String[] args) {
         FrLogin syst = new FrLogin();
@@ -34,6 +39,6 @@ public class FrLogin extends JFrame{
         syst.setVisible(true);
         syst.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
+        new Controller.FrLoginController(syst);
     }
 }
