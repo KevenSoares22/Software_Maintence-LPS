@@ -1,26 +1,22 @@
 <dependencies>
-    <!-- Dependência do Hibernate JPA -->
     <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
-        <version>5.6.10.Final</version> <!-- Escolha a versão que você estiver usando -->
+        <version>5.6.10.Final</version>
     </dependency>
 
-    <!-- Dependência do driver MySQL -->
     <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>8.0.29</version> <!-- Escolha a versão compatível com seu MySQL -->
+        <groupId>com.mysql</groupId>
+        <artifactId>mysql-connector-java-j</artifactId>
+        <version>8.0.34</version>
     </dependency>
 
-    <!-- Dependência do JPA (se não estiver no Java EE) -->
     <dependency>
         <groupId>javax.persistence</groupId>
         <artifactId>javax.persistence-api</artifactId>
         <version>2.2</version>
     </dependency>
 
-    <!-- Dependência do EhCache (caso queira usar cache de segundo nível) -->
     <dependency>
         <groupId>org.ehcache</groupId>
         <artifactId>ehcache</artifactId>

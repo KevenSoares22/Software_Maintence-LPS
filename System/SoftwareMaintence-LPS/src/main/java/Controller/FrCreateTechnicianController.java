@@ -35,29 +35,34 @@ public class FrCreateTechnicianController {
     }
 
     private void handleCriarButton() {
-        String nome = view.getTextField1().getText();
-        String sobrenome = view.getTextField2().getText();
-        String cpf = view.getTextField3().getText();
-        String telefone = view.getTextField4().getText();
-        String endereco = view.getTextField5().getText();
-        String especializacao = view.getTextField6().getText();
+        // Usando os getters para acessar os campos
+        String nome = view.getNameField().getText();
+        String email = view.getEmailField().getText();
+        String senha = view.getPasswordField().getText();
+        String identidade = view.getIdentityField().getText();
+        String areaId = view.getAreaIdField().getText();
+        String comissao = view.getComissionValueField().getText();
+
         String genero = view.getMasculinoRadioButton().isSelected() ? "Masculino" :
                 view.getFemininoRadioButton().isSelected() ? "Feminino" : "";
 
-        if (nome.isEmpty() || sobrenome.isEmpty() || cpf.isEmpty() || telefone.isEmpty() ||
-                endereco.isEmpty() || especializacao.isEmpty() || genero.isEmpty()) {
+        // Verificando se algum campo está vazio
+        if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || identidade.isEmpty() ||
+                areaId.isEmpty() || comissao.isEmpty() || genero.isEmpty()) {
             JOptionPane.showMessageDialog(view, "Todos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
+        // Exibindo os dados no console
         System.out.println("Nome: " + nome);
-        System.out.println("Sobrenome: " + sobrenome);
-        System.out.println("CPF: " + cpf);
-        System.out.println("Telefone: " + telefone);
-        System.out.println("Endereço: " + endereco);
-        System.out.println("Especialização: " + especializacao);
+        System.out.println("Email: " + email);
+        System.out.println("Senha: " + senha);
+        System.out.println("Identidade: " + identidade);
+        System.out.println("ID da Área: " + areaId);
+        System.out.println("Comissão: " + comissao);
         System.out.println("Gênero: " + genero);
 
+        // Exibindo uma mensagem de sucesso
         JOptionPane.showMessageDialog(view, "Técnico(a) adicionado(a) com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
 }

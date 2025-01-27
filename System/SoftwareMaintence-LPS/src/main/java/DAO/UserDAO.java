@@ -1,12 +1,12 @@
 package DAO;
 
 import Factory.DatabaseJPA;
-import Model.Entities.Technician;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import java.util.List;
+import Model.Entities.User;
 
-public class UserDAO extends DAO<User> {
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+
+public class UserDAO {
 
     private EntityManager entityManager;
 
@@ -14,51 +14,26 @@ public class UserDAO extends DAO<User> {
         this.entityManager = DatabaseJPA.getInstance().getEntityManager();
     }
 
-    @Override
-    public boolean delete(int id) {
-        EntityTransaction transaction = entityManager.getTransaction();
+    // Método que busca o usuário pelo email e senha
+    public User findByEmailAndPassword(String email, String password) {
         try {
-            transaction.begin();
-            User user = entityManager.find(User.class, id);
-            if (user == null) {
-                transaction.rollback();
-                return false;
-            }
-            entityManager.remove(user);
-            transaction.commit();
-            return true;
-        } catch (Exception e) {
-            transaction.rollback();
-            return false;
+            return entityManager.createQuery("SELECT u FROM JrUsers u WHERE u.email = :email AND u.password = :password", User.class)
+                    .setParameter("email", email)
+                    .setParameter("password", password)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
         }
     }
 
-    @Override
-    public User find(int id) {
-        return entityManager.find(User.class, id);
-    }
-
-    @Override
-    public List<User> findAll() {
-        return entityManager.createQuery("SELECT u FROM User u", User.class)
-                .getResultList();
-    }
-
     public User findByEmail(String email) {
-        return entityManager.createQuery("SELECT u FROM User u WHERE u.email = :email", User.class)
-                .setParameter("email", email)
-                .getSingleResult();
+        try {
+            return entityManager.createQuery("SELECT u FROM JrUsers u WHERE u.email = :email", User.class)
+                    .setParameter("email", email)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 
-    public User findByCPF(String cpf) {
-        return entityManager.createQuery("SELECT u FROM User u WHERE u.cpf = :cpf", User.class)
-                .setParameter("cpf", cpf)
-                .getSingleResult();
-    }
-
-    public List<User> findByName(String name) {
-        return entityManager.createQuery("SELECT u FROM User u WHERE u.name LIKE :name", User.class)
-                .setParameter("name", name + "%")
-                .getResultList();
-    }
 }

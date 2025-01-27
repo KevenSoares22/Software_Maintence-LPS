@@ -1,12 +1,12 @@
 package DAO;
 
 import Factory.DatabaseJPA;
-import Model.Entities.MaintenanceInfo;
+import Model.Entities.MaintenceInfo;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
 
-public class MaintenanceInfoDAO extends DAO<MaintenanceInfo> {
+public class MaintenanceInfoDAO extends DAO<MaintenceInfo> {
 
     private EntityManager entityManager;
 
@@ -19,12 +19,12 @@ public class MaintenanceInfoDAO extends DAO<MaintenanceInfo> {
         EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
-            MaintenanceInfo maintenanceInfo = entityManager.find(MaintenanceInfo.class, id);
-            if (maintenanceInfo == null) {
+            MaintenceInfo maintenceInfo = entityManager.find(MaintenceInfo.class, id);
+            if (maintenceInfo == null) {
                 transaction.rollback();
                 return false;
             }
-            entityManager.remove(maintenanceInfo);
+            entityManager.remove(maintenceInfo);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -34,18 +34,23 @@ public class MaintenanceInfoDAO extends DAO<MaintenanceInfo> {
     }
 
     @Override
-    public MaintenanceInfo find(int id) {
-        return entityManager.find(MaintenanceInfo.class, id);
+    public MaintenceInfo find(int id) {
+        return entityManager.find(MaintenceInfo.class, id);
     }
 
     @Override
-    public List<MaintenanceInfo> findAll() {
-        return entityManager.createQuery("SELECT mi FROM MaintenanceInfo mi", MaintenanceInfo.class)
+    public List<MaintenceInfo> findAll() {
+        return entityManager.createQuery("SELECT mi FROM MaintenanceInfo mi", MaintenceInfo.class)
                 .getResultList();
     }
 
-    public MaintenanceInfo findByClientId(int clientId) {
-        return entityManager.createQuery("SELECT mi FROM MaintenanceInfo mi WHERE mi.clientId = :clientId", MaintenanceInfo.class)
+    @Override
+    public Class<MaintenceInfo> getEntityClass() {
+        return MaintenceInfo.class;
+    }
+
+    public MaintenceInfo findByClientId(int clientId) {
+        return entityManager.createQuery("SELECT mi FROM MaintenanceInfo mi WHERE mi.clientId = :clientId", MaintenceInfo.class)
                 .setParameter("clientId", clientId)
                 .getSingleResult();
     }

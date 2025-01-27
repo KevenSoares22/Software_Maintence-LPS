@@ -44,6 +44,11 @@ public class ServiceAppointmentDAO extends DAO<ServiceAppointment> {
                 .getResultList();
     }
 
+    @Override
+    public Class<ServiceAppointment> getEntityClass() {
+        return ServiceAppointment.class;
+    }
+
     public ServiceAppointment findByClientId(int clientId) {
         return entityManager.createQuery("SELECT sa FROM ServiceAppointment sa WHERE sa.clientId = :clientId", ServiceAppointment.class)
                 .setParameter("clientId", clientId)

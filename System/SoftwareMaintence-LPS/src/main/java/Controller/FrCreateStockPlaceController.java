@@ -35,19 +35,23 @@ public class FrCreateStockPlaceController {
     }
 
     private void handleCriarButton() {
-        String campo1 = view.getTextField1().getText();
-        String campo2 = view.getTextField2().getText();
-        String campo3 = view.getTextField3().getText();
+        // Usando os getters corretos para acessar os campos
+        String place = view.getPlaceField().getText();
+        String space = view.getSpaceField().getText();
+        String filial = view.getFilialField().getText();
 
-        if (campo1.isEmpty() || campo2.isEmpty() || campo3.isEmpty()) {
+        // Verificando se algum campo está vazio
+        if (place.isEmpty() || space.isEmpty() || filial.isEmpty()) {
             JOptionPane.showMessageDialog(view, "Todos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        System.out.println("Campo 1: " + campo1);
-        System.out.println("Campo 2: " + campo2);
-        System.out.println("Campo 3: " + campo3);
+        // Exibindo os dados no console
+        System.out.println("Local: " + place);
+        System.out.println("Espaço: " + space);
+        System.out.println("Filial: " + filial);
 
+        // Exibindo uma mensagem de sucesso
         JOptionPane.showMessageDialog(view, "Local de estoque criado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
 }

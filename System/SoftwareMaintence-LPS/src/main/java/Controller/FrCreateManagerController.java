@@ -21,7 +21,6 @@ public class FrCreateManagerController {
                 handleFecharButton();
             }
         });
-
         view.getCriarButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -35,25 +34,29 @@ public class FrCreateManagerController {
     }
 
     private void handleCriarButton() {
-        String campo1 = view.getTextField1().getText();
-        String campo2 = view.getTextField2().getText();
-        String campo3 = view.getTextField3().getText();
-        String campo6 = view.getTextField6().getText();
-        String campo7 = view.getTextField7().getText();
-        char[] password = view.getPasswordField1().getPassword();
+        // Pegando os valores dos campos com base nos getters definidos
+        String email = view.getEmailField().getText();
+        String name = view.getNameField().getText();
+        String idetity = view.getIdetityField().getText();
+        String salary = view.getSalaryField().getText();
+        String filial = String.valueOf(view.getFilialField()); // Para pegar o texto do JPasswordField
+        String password = String.valueOf(view.getPasswordField().getPassword()); // Para pegar a senha do JPasswordField
 
-        if (campo1.isEmpty() || campo2.isEmpty() || campo3.isEmpty() || campo6.isEmpty() || campo7.isEmpty() || password.length == 0) {
+        // Verificando se algum campo está vazio
+        if (email.isEmpty() || name.isEmpty() || idetity.isEmpty() || salary.isEmpty() || filial.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(view, "Todos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        System.out.println("Campo 1: " + campo1);
-        System.out.println("Campo 2: " + campo2);
-        System.out.println("Campo 3: " + campo3);
-        System.out.println("Campo 6: " + campo6);
-        System.out.println("Campo 7: " + campo7);
-        System.out.println("Senha: " + String.valueOf(password));
+        // Exibindo os dados no console (ou podendo implementar lógica adicional aqui)
+        System.out.println("Email: " + email);
+        System.out.println("Nome: " + name);
+        System.out.println("Identidade: " + idetity);
+        System.out.println("Salário: " + salary);
+        System.out.println("Filial: " + filial);
+        System.out.println("Senha: " + password);
 
+        // Exibindo uma mensagem de sucesso
         JOptionPane.showMessageDialog(view, "Gerente registrado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
 }

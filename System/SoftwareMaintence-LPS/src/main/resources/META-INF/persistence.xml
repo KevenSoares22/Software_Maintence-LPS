@@ -5,34 +5,19 @@
                                  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
 
-    <!-- Nome da unidade de persistência -->
-    <persistence-unit name="myJpaUnit" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="safesoft" transaction-type="RESOURCE_LOCAL">
 
-        <!-- Configuração do provedor de persistência (Hibernate) -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <!-- Configurações do banco de dados -->
         <properties>
-            <!-- URL de conexão com o banco de dados -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/seubanco"/>
-            <!-- Usuário do banco de dados -->
-            <property name="javax.persistence.jdbc.user" value="seuusuario"/>
-            <!-- Senha do banco de dados -->
-            <property name="javax.persistence.jdbc.password" value="suasenha"/>
-            <!-- Driver JDBC -->
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <!-- Dialeto do Hibernate (para MySQL 8.x) -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://meconecte.cjsd5awahfiz.us-east-2.rds.amazonaws.com:3306/MeConecte?useSSL=false&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="testeconexao"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysqljdbc.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-            <!-- Mostrar SQL no console -->
             <property name="hibernate.show_sql" value="true"/>
-            <!-- Formatação do SQL -->
             <property name="hibernate.format_sql" value="true"/>
-            <!-- Criação automática do schema (opcional) -->
             <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <!-- Ativar o Hibernate para utilização de cache -->
-            <property name="hibernate.cache.use_second_level_cache" value="true"/>
-            <!-- Configuração de cache de segundo nível (opcional) -->
-            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
         </properties>
 
     </persistence-unit>

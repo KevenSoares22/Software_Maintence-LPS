@@ -44,6 +44,11 @@ public class PieceDAO extends DAO<Piece> {
                 .getResultList();
     }
 
+    @Override
+    public Class<Piece> getEntityClass() {
+        return Piece.class;
+    }
+
     public Piece findByName(String name) {
         return entityManager.createQuery("SELECT p FROM Piece p WHERE p.nome = :name", Piece.class)
                 .setParameter("name", name)

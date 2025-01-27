@@ -1,29 +1,34 @@
 package DAO;
 
 import Factory.DatabaseJPA;
+import Interfaces.IDao;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
-public abstract class DAO<T> {
-
+public abstract class DAO<T> implements IDao<T> {
     protected EntityManager entityManager;
+    protected String jpql;
+    protected Query qry;
 
     public DAO() {
         this.entityManager = DatabaseJPA.getInstance().getEntityManager();
     }
 
-    public boolean insert(T entity) {
-        try {
-            entityManager.getTransaction().begin();
-            entityManager.persist(entity);
-            entityManager.getTransaction().commit();
-            return true;
-        } catch (Exception e) {
-            if (entityManager.getTransaction().isActive()) {
-                entityManager.getTransaction().rollback();
-            }
-            return false;
-        }
+    @Override
+    public void save(T obj) {
+        this.entityManager.getTransaction().begin();
+        this.entityManager.persist(obj);
+        this.entityManager.getTransaction().commit();
+        this.entityManager.close();
+    }
+
+    @Override
+    public void update(T obj) {
+        this.entityManager.getTransaction().begin();
+        this.entityManager.merge(obj);
+        this.entityManager.getTransaction().commit();
+        this.entityManager.close();
     }
 
     public boolean delete(int id) {
@@ -32,27 +37,28 @@ public abstract class DAO<T> {
             if (entity == null) {
                 return false;
             }
-            entityManager.getTransaction().begin();
-            entityManager.remove(entity);
-            entityManager.getTransaction().commit();
+            this.entityManager.getTransaction().begin();
+            this.entityManager.remove(entity);
+            this.entityManager.getTransaction().commit();
             return true;
         } catch (Exception e) {
-            if (entityManager.getTransaction().isActive()) {
-                entityManager.getTransaction().rollback();
+            if (this.entityManager.getTransaction().isActive()) {
+                this.entityManager.getTransaction().rollback();
             }
             return false;
+        } finally {
+            this.entityManager.close();
         }
     }
 
     public T find(int id) {
-        return entityManager.find(getEntityClass(), id);
+        return this.entityManager.find(getEntityClass(), id);
     }
 
     public List<T> findAll() {
-        return entityManager.createQuery("SELECT e FROM " + getEntityClass().getSimpleName() + " e", getEntityClass())
+        return this.entityManager.createQuery("SELECT e FROM " + getEntityClass().getSimpleName() + " e", getEntityClass())
                 .getResultList();
     }
 
-    // Método abstrato para obter a classe da entidade
     protected abstract Class<T> getEntityClass();
 }

@@ -35,23 +35,27 @@ public class FrCreateServiceAppointmentController {
     }
 
     private void handleCriarButton() {
-        String campo1 = view.getTextField1().getText();
-        String campo2 = view.getTextField2().getText();
-        String campo3 = view.getTextField3().getText();
-        String campo4 = view.getTextField4().getText();
-        String campo5 = view.getTextField5().getText();
+        // Pegando os valores dos campos com base nos getters definidos
+        String client = view.getClientField().getText();
+        String description = view.getDescriptionField().getText();
+        String time = view.getTimeField().getText();
+        String price = view.getPriceField().getText();
+        String areaId = view.getAreaIdField().getText();
 
-        if (campo1.isEmpty() || campo2.isEmpty() || campo3.isEmpty() || campo4.isEmpty() || campo5.isEmpty()) {
+        // Verificando se algum campo está vazio
+        if (client.isEmpty() || description.isEmpty() || time.isEmpty() || price.isEmpty() || areaId.isEmpty()) {
             JOptionPane.showMessageDialog(view, "Todos os campos devem ser preenchidos!", "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        System.out.println("Campo 1: " + campo1);
-        System.out.println("Campo 2: " + campo2);
-        System.out.println("Campo 3: " + campo3);
-        System.out.println("Campo 4: " + campo4);
-        System.out.println("Campo 5: " + campo5);
+        // Exibindo os dados no console
+        System.out.println("Cliente: " + client);
+        System.out.println("Descrição: " + description);
+        System.out.println("Horário: " + time);
+        System.out.println("Preço: " + price);
+        System.out.println("ID da área: " + areaId);
 
+        // Exibindo uma mensagem de sucesso
         JOptionPane.showMessageDialog(view, "Agendamento de serviço criado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
 }

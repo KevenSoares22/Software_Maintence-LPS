@@ -44,6 +44,11 @@ public class ClientDAO extends DAO<Client> {
                 .getResultList();
     }
 
+    @Override
+    public Class<Client> getEntityClass() {
+        return Client.class;
+    }
+
     public Client findByEmail(String email) {
         try {
             return entityManager.createQuery("SELECT c FROM Client c WHERE c.email = :email", Client.class)

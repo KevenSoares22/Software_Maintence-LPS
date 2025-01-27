@@ -44,6 +44,11 @@ public class StockPlaceDAO extends DAO<StockPlace> {
                 .getResultList();
     }
 
+    @Override
+    public Class<StockPlace> getEntityClass() {
+        return StockPlace.class;
+    }
+
     public StockPlace findByFilial(String filial) {
         return entityManager.createQuery("SELECT sp FROM StockPlace sp WHERE sp.filial = :filial", StockPlace.class)
                 .setParameter("filial", filial)

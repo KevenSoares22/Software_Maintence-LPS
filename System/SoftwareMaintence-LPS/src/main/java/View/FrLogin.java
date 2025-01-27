@@ -9,7 +9,7 @@ public class FrLogin extends JFrame {
     private JLabel title;
     private JLabel emailLabel;
     private JLabel passwordLabel;
-    private JCheckBox clienteCheckBox;
+    private JCheckBox clientCheckBox;
     private JPanel panelMain;
 
     public FrLogin() {
@@ -27,8 +27,8 @@ public class FrLogin extends JFrame {
         return passwordField;
     }
 
-    public JCheckBox getClienteCheckBox() {
-        return clienteCheckBox;
+    public JCheckBox getClientCheckBox() {
+        return clientCheckBox;
     }
 
     public static void main(String[] args) {
