@@ -9,40 +9,41 @@ import java.awt.geom.RoundRectangle2D;
 import java.io.Serializable;
 
 public class SecondaryCustomButton extends JButton implements Serializable {
-    
-    private static final int BORDER_RADIUS = 8;
+
+    private static final int BORDER_RADIUS = 20;  // Raio da borda
     private boolean isHovered = false;
-    
+
     public SecondaryCustomButton() {
         this("Button");
         setupButton();
     }
-    
+
     public SecondaryCustomButton(String text) {
         super(text);
         setupButton();
     }
-    
+
     private void setupButton() {
         // Configurar fonte
         setFont(new Font("Segoe UI", Font.PLAIN, 14));
-        
+
         setBackground(new Color(0, 0, 0, 0)); // Transparente
         setForeground(Colors.GRAY_500); // Texto em cinza escuro
-        
-        setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
-        
+
+        // Aumentando o padding para tornar o botão mais largo
+        setBorder(BorderFactory.createEmptyBorder(10, 30, 10, 30)); // Aumentando as margens esquerda e direita
+
         setContentAreaFilled(false);
         setFocusPainted(false);
         setBorderPainted(false);
-        
+
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 isHovered = true;
                 repaint();
             }
-            
+
             @Override
             public void mouseExited(MouseEvent e) {
                 isHovered = false;
@@ -50,25 +51,25 @@ public class SecondaryCustomButton extends JButton implements Serializable {
             }
         });
     }
-    
+
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g.create();
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        
-        // Desenhar background com bordas levemente arredondadas
+
+        // Desenhar background com bordas arredondadas
         if (isHovered) {
-            g2.setColor(new Color(0, 0, 0, 10)); // Cinza muito claro para hover
+            g2.setColor(new Color(0, 0, 0, 20)); // Cinza bem suave para hover
             g2.fill(new RoundRectangle2D.Float(0, 0, getWidth(), getHeight(), BORDER_RADIUS, BORDER_RADIUS));
         }
-        
-        // Desenhar borda
-        g2.setColor(Colors.GRAY_200);
-        g2.setStroke(new BasicStroke(1));
+
+        // Desenhar borda mais destacada
+        g2.setColor(Colors.GRAY_300); // Cor da borda
+        g2.setStroke(new BasicStroke(2)); // Espessura da borda
         g2.draw(new RoundRectangle2D.Float(0, 0, getWidth() - 1, getHeight() - 1, BORDER_RADIUS, BORDER_RADIUS));
-        
+
         g2.dispose();
-        
+
         super.paintComponent(g);
     }
 }

@@ -131,7 +131,7 @@ public class PnlSidebar extends javax.swing.JPanel {
         add(btnConfiguracoes);
         btnConfiguracoes.setBounds(10, 190, 230, 40);
 
-        btnGerenciaClientes.setText("GerenciarClientes");
+        btnGerenciaClientes.setText("Gerenciar Clientes");
         btnGerenciaClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGerenciaClientesActionPerformed(evt);

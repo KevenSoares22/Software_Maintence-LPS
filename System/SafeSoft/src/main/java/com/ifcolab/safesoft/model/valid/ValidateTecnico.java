@@ -15,10 +15,6 @@ public class ValidateTecnico extends ValidatePessoa {
             throw new TecnicoException("cod não pode estar em branco.");
         }
         
-        if (!isValidcod(cod)) {
-            throw new TecnicoException("cod inválido.");
-        }
-        
         if (especializacao == null) {
             throw new TecnicoException("Especialização não pode estar em branco.");
         }
@@ -26,8 +22,5 @@ public class ValidateTecnico extends ValidatePessoa {
         return new Tecnico(nome, email, senha, cpf, sexo, dataNascimento, telefone, endereco, cod, especializacao, avatar);
     }
     
-    private boolean isValidcod(String cod) {
-        cod = cod.replaceAll("[^0-9]", "");
-        return cod.length() >= 5 && cod.length() <= 6 && cod.matches("^\\d+$");
-    }
+
 }

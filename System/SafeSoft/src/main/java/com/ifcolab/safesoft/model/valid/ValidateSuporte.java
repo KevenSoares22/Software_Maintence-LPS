@@ -14,16 +14,7 @@ public class ValidateSuporte extends ValidatePessoa {
         if (cod == null || cod.isEmpty()) {
             throw new SuporteException("cod não pode estar em branco.");
         }
-        
-        if (!isValidcod(cod)) {
-            throw new SuporteException("cod inválido.");
-        }
+
 
         return new Suporte(nome, email, senha, cpf, sexo, dataNascimento, telefone, endereco, cod, avatar);
-    }
-    
-    private boolean isValidcod(String cod) {
-        cod = cod.replaceAll("[^0-9]", "");
-        return cod.length() >= 5 && cod.length() <= 7 && cod.matches("^\\d+$");
-    }
-}
+    }}
