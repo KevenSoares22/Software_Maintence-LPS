@@ -25,7 +25,7 @@ SafeSoft é um sistema de gestão de manutenção de hardware projetado para fac
 - **Backend**: Java
 - **Frontend**: Java
 - **Banco de Dados**: MySQL com JPA (Hibernate)
-- **Infraestrutura**: AWS (Amazon Web Services) para hospedagem
+- **Infraestrutura**: AWS (Amazon Web Services) RDS para hospedagem
 - **Controle de Versão**: Git
 
 ## Pré-requisitos
@@ -35,7 +35,6 @@ SafeSoft é um sistema de gestão de manutenção de hardware projetado para fac
 
 ## Como Iniciar
     - Inicie SafeSoft.java
-
 
 1. **Banco de Dados na AWS RDS**:
     - Crie uma instância MySQL no AWS RDS e configure o endpoint.
