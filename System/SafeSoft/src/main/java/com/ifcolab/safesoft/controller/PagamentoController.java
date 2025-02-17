@@ -59,7 +59,7 @@ public class PagamentoController {
     private void enviarConfirmacaoPagamento(double valor, MetodoPagamento metodoPagamento) {
         String mensagem = String.format(
             "Olá %s,\n\n" +
-            "O pagamento da sua consulta foi confirmado:\n\n" +
+            "O pagamento da sua servico foi confirmado:\n\n" +
             "Data: %s\n" +
             "Tecnico: %s\n" +
             "Valor: R$ %.2f\n" +
@@ -108,8 +108,8 @@ public class PagamentoController {
         return MetodoPagamento.values();
     }
     
-    public List<Pagamento> buscarPorServico(int consultaId) {
-        return repositorio.buscarPorServico(consultaId);
+    public List<Pagamento> buscarPorServico(int servicoId) {
+        return repositorio.buscarPorServico(servicoId);
     }
     
     public void excluir(Pagamento pagamento) throws Exception {

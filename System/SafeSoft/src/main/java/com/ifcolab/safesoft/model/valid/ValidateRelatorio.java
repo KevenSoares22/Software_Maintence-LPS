@@ -29,7 +29,7 @@ public class ValidateRelatorio {
         }
         
         if (servico == null) {
-            throw new RelatorioException("Consulta não pode estar em branco.");
+            throw new RelatorioException("Servico não pode estar em branco.");
         }
         
         return new Relatorio(0, dataEmissao, resultado, observacoes, caminhoPdf, servico);

@@ -33,6 +33,6 @@ public class Relatorio {
     private String caminhoPdf;
     
     @OneToOne
-    @JoinColumn(name = "consulta_id")
+    @JoinColumn(name = "servico_id")
     private Servico servico;
 }

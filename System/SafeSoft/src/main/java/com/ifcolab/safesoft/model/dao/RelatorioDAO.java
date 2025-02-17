@@ -36,7 +36,7 @@ public class RelatorioDAO extends Dao<Relatorio> {
     @Override
     public List<Relatorio> findAll() {
         this.entityManager = DatabaseJPA.getInstance().getEntityManager();
-        jpql = "SELECT DISTINCT r FROM Relatorio r LEFT JOIN FETCH r.consulta";
+        jpql = "SELECT DISTINCT r FROM Relatorio r LEFT JOIN FETCH r.servico";
         TypedQuery<Relatorio> query = this.entityManager.createQuery(jpql, Relatorio.class);
         List<Relatorio> lst = query.getResultList();
         this.entityManager.close();

@@ -29,8 +29,8 @@ public class DlgNovoServico extends javax.swing.JDialog {
     private final SuporteController suporteController;
     private final ItemController itemController;
     private int idServicoEditando;
-    private boolean consultaCadastrada;
-    private boolean consultaAlterada;
+    private boolean servicoCadastrada;
+    private boolean servicoAlterada;
     private List<Item> itensSelecionados;
     
     public DlgNovoServico(java.awt.Frame parent, boolean modal) {
@@ -49,8 +49,8 @@ public class DlgNovoServico extends javax.swing.JDialog {
             
             controller.atualizarTabela(grdServicos);
             idServicoEditando = -1;
-            consultaCadastrada = false;
-            consultaAlterada = false;
+            servicoCadastrada = false;
+            servicoAlterada = false;
             itensSelecionados = new ArrayList<>();
             
             this.configurarComponentes();
@@ -67,11 +67,11 @@ public class DlgNovoServico extends javax.swing.JDialog {
     }
     
     public boolean isServicoCadastrada() {
-        return consultaCadastrada;
+        return servicoCadastrada;
     }
     
     public boolean isServicoAlterada() {
-        return consultaAlterada;
+        return servicoAlterada;
     }
 
     private void configurarComponentes() {
@@ -394,7 +394,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
 
         lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicos.setText("Agende novas consultas vinculando clientes, profissionais e horários disponíveis.");
+        lblSubtituloGerenciaTecnicos.setText("Agende novas servicos vinculando clientes, profissionais e horários disponíveis.");
         getContentPane().add(lblSubtituloGerenciaTecnicos);
         lblSubtituloGerenciaTecnicos.setBounds(30, 40, 550, 17);
 
@@ -445,12 +445,12 @@ public class DlgNovoServico extends javax.swing.JDialog {
     private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
         Servico servicoSelecionada = getObjetoSelecionadoNaGrid();
         if (servicoSelecionada == null) {
-            JOptionPane.showMessageDialog(this, "Selecione uma consulta para remover.");
+            JOptionPane.showMessageDialog(this, "Selecione uma servico para remover.");
             return;
         }
 
         int opcao = JOptionPane.showConfirmDialog(this,
-            "Deseja realmente remover esta consulta?",
+            "Deseja realmente remover esta servico?",
             "Confirmação",
             JOptionPane.YES_NO_OPTION);
 
@@ -458,14 +458,14 @@ public class DlgNovoServico extends javax.swing.JDialog {
             try {
                 controller.excluir(servicoSelecionada.getId());
                 controller.atualizarTabela(grdServicos);
-                consultaAlterada = true;
+                servicoAlterada = true;
                 
                 // Limpar e desabilitar o formulário após remover
                 this.limparFormulario();
                 this.habilitarFormulario(false);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this,
-                    "Erro ao remover consulta: " + e.getMessage(),
+                    "Erro ao remover servico: " + e.getMessage(),
                     "Erro",
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -516,7 +516,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
                         suporte,
                     itensSelecionados
                 );
-                consultaAlterada = true;
+                servicoAlterada = true;
             } else {
                 controller.cadastrar(
                     dataHora,
@@ -526,7 +526,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
                         suporte,
                     itensSelecionados
                 );
-                consultaCadastrada = true;
+                servicoCadastrada = true;
             }
 
             controller.atualizarTabela(grdServicos);

@@ -35,7 +35,7 @@ public class Feedback {
     private LocalDateTime dataAvaliacao;
     
     @ManyToOne
-    @JoinColumn(name = "consulta_id", nullable = false)
+    @JoinColumn(name = "servico_id", nullable = false)
     private Servico servico;
     
     public Feedback(String titulo, String descricao, int avaliacao, Servico servico, LocalDateTime dataAvaliacao) {

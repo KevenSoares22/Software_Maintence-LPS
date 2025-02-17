@@ -39,15 +39,15 @@ public class ValidateServico {
         }
     }
     
-    public void validarHorarioConflitante(LocalDateTime dataHoraConsulta, 
+    public void validarHorarioConflitante(LocalDateTime dataHoraServico, 
             LocalDateTime dataHoraExistente, int duracaoMinutos) {
             
-        LocalDateTime fimConsultaExistente = dataHoraExistente.plusMinutes(duracaoMinutos);
+        LocalDateTime fimServicoExistente = dataHoraExistente.plusMinutes(duracaoMinutos);
         
-        if ((dataHoraConsulta.isEqual(dataHoraExistente) || 
-             dataHoraConsulta.isAfter(dataHoraExistente)) && 
-            dataHoraConsulta.isBefore(fimConsultaExistente)) {
-            throw new ServicoException("Existe conflito de horário com outra consulta");
+        if ((dataHoraServico.isEqual(dataHoraExistente) || 
+             dataHoraServico.isAfter(dataHoraExistente)) && 
+            dataHoraServico.isBefore(fimServicoExistente)) {
+            throw new ServicoException("Existe conflito de horário com outra servico");
         }
     }
     
@@ -63,16 +63,16 @@ public class ValidateServico {
             int tempoMinimoAntecedenciaMinutos, int tempoMaximoAgendamentoDias) {
             
         LocalDateTime agora = LocalDateTime.now();
-        long minutosAteConsulta = java.time.Duration.between(agora, dataHora).toMinutes();
-        long diasAteConsulta = java.time.Duration.between(agora, dataHora).toDays();
+        long minutosAteServico = java.time.Duration.between(agora, dataHora).toMinutes();
+        long diasAteServico = java.time.Duration.between(agora, dataHora).toDays();
         
-        if (minutosAteConsulta < tempoMinimoAntecedenciaMinutos) {
+        if (minutosAteServico < tempoMinimoAntecedenciaMinutos) {
             throw new ServicoException("É necessário agendar com no mínimo " +
                 tempoMinimoAntecedenciaMinutos + " minutos de antecedência");
         }
         
-        if (diasAteConsulta > tempoMaximoAgendamentoDias) {
-            throw new ServicoException("Não é possível agendar consultas com mais de " +
+        if (diasAteServico > tempoMaximoAgendamentoDias) {
+            throw new ServicoException("Não é possível agendar servicos com mais de " +
                 tempoMaximoAgendamentoDias + " dias de antecedência");
         }
     }

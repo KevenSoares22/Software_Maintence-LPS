@@ -4,6 +4,9 @@ import com.ifcolab.safesoft.controller.tablemodel.TMViewCliente;
 import com.ifcolab.safesoft.model.Cliente;
 import com.ifcolab.safesoft.model.Servico;
 import com.ifcolab.safesoft.model.dao.ClienteDAO;
+
+
+
 import com.ifcolab.safesoft.model.dao.ServicoDAO;
 import com.ifcolab.safesoft.model.enums.TipoSexo;
 import com.ifcolab.safesoft.model.exceptions.ClienteException;

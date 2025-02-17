@@ -25,7 +25,7 @@ public class ValidateFeedback {
         }
         
         if (servico == null) {
-            throw new FeedbackException("Consulta não pode estar em branco.");
+            throw new FeedbackException("Servico não pode estar em branco.");
         }
         
         return new Feedback(0, titulo, descricao , avaliacao, dataAvaliacao, servico);

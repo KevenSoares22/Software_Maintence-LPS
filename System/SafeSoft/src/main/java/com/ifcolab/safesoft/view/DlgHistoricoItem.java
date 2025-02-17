@@ -78,15 +78,15 @@ public class DlgHistoricoItem extends javax.swing.JDialog {
         try {
             int linhaSelecionada = grdHistorico.getSelectedRow();
             if (linhaSelecionada == -1) {
-                exibirAviso("Selecione uma consulta para visualizar o relatório.");
+                exibirAviso("Selecione uma servico para visualizar o relatório.");
                 return;
             }
 
             TMViewHistoricoItem modelo = (TMViewHistoricoItem) grdHistorico.getModel();
-            Servico servico = modelo.getConsulta(linhaSelecionada);
+            Servico servico = modelo.getServico(linhaSelecionada);
             
             if (servico.getItens().isEmpty()) {
-                exibirAviso("Não há servicos registrados nesta consulta.");
+                exibirAviso("Não há servicos registrados nesta servico.");
                 return;
             }
 

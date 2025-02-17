@@ -110,7 +110,7 @@ public class GeradorPdf implements IGeradorDocumento {
             adicionarLinha(documento, "CPF:", servico.getCliente().getCpf());
             documento.add(new Paragraph("\n"));
             
-            documento.add(new Paragraph("Dados da Consulta", SUBTITULO));
+            documento.add(new Paragraph("Dados da Servico", SUBTITULO));
             adicionarLinha(documento, "Data/Hora:", 
                 servico.getDataHora().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
             adicionarLinha(documento, "Tecnicoa:", servico.getTecnico().getNome());

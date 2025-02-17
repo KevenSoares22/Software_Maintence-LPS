@@ -185,7 +185,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
     
     private void confirmarServico() {
         int opcao = JOptionPane.showConfirmDialog(this,
-            "Deseja realmente confirmar esta consulta?",
+            "Deseja realmente confirmar esta servico?",
             "Confirmar Servico",
             JOptionPane.YES_NO_OPTION,
             JOptionPane.QUESTION_MESSAGE);
@@ -201,7 +201,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
                 dispose();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this,
-                    "Erro ao confirmar consulta: " + e.getMessage(),
+                    "Erro ao confirmar servico: " + e.getMessage(),
                     "Erro",
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -210,7 +210,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
     
     private void cancelarServico() {
         int opcao = JOptionPane.showConfirmDialog(this,
-            "Deseja realmente cancelar esta consulta?\n\n" +
+            "Deseja realmente cancelar esta servico?\n\n" +
             "Esta ação não poderá ser desfeita.",
             "Cancelar Servico",
             JOptionPane.YES_NO_OPTION,
@@ -227,7 +227,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
                 dispose();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this,
-                    "Erro ao cancelar consulta: " + e.getMessage(),
+                    "Erro ao cancelar servico: " + e.getMessage(),
                     "Erro",
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -236,7 +236,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
     
     private void realizarServico() {
         int opcao = JOptionPane.showConfirmDialog(this,
-            "Deseja marcar esta consulta como realizada?",
+            "Deseja marcar esta servico como realizada?",
             "Realizar Servico",
             JOptionPane.YES_NO_OPTION,
             JOptionPane.QUESTION_MESSAGE);
@@ -253,7 +253,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
                 dispose();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this,
-                    "Erro ao realizar consulta: " + e.getMessage(),
+                    "Erro ao realizar servico: " + e.getMessage(),
                     "Erro",
                     JOptionPane.ERROR_MESSAGE);
             }
@@ -275,7 +275,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
 
             if (pagamentos.isEmpty()) {
                 JOptionPane.showMessageDialog(this,
-                    "Não há pagamento registrado para esta consulta.",
+                    "Não há pagamento registrado para esta servico.",
                     "Aviso",
                     JOptionPane.WARNING_MESSAGE);
                 return;
@@ -319,7 +319,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
     private void gerarRelatorio() {
     if (controller.getServico().getItens().isEmpty()) {
         JOptionPane.showMessageDialog(this,
-            "Não há items registrados nesta consulta.",
+            "Não há items registrados nesta servico.",
             "Aviso",
             JOptionPane.WARNING_MESSAGE);
         return;

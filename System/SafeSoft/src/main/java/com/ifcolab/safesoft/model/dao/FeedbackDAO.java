@@ -35,7 +35,7 @@ public class FeedbackDAO extends Dao<Feedback> {
     @Override
     public List<Feedback> findAll() {
         this.entityManager = DatabaseJPA.getInstance().getEntityManager();
-        jpql = "SELECT DISTINCT f FROM Feedback f LEFT JOIN FETCH f.consulta";
+        jpql = "SELECT DISTINCT f FROM Feedback f LEFT JOIN FETCH f.servico";
         TypedQuery<Feedback> query = this.entityManager.createQuery(jpql, Feedback.class);
         List<Feedback> lst = query.getResultList();
         this.entityManager.close();

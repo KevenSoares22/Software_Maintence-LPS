@@ -309,11 +309,6 @@ public class PnlSidebar extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnMeusServicosActionPerformed
 
-    private void btnGerenciarRecepcionistasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarRecepcionistasActionPerformed
-        DlgGerenciaRecepcionista dialog = new DlgGerenciaRecepcionista(null, true);
-        dialog.setLocationRelativeTo(parentFrame);
-        dialog.setVisible(true);
-    }//GEN-LAST:event_btnGerenciarRecepcionistasActionPerformed
 
     private void btnGerenciarPagamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarPagamentosActionPerformed
         DlgGerenciaPagamento dialog = new DlgGerenciaPagamento(null, true);

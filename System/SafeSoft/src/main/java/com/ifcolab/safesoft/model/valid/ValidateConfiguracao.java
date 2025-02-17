@@ -6,7 +6,7 @@ import java.time.LocalTime;
 
 public class ValidateConfiguracao {
     
-    public ConfiguracaoSistema validaCamposEntrada(LocalTime horarioAbertura, LocalTime horarioFechamento, int intervaloConsultaMinutos, boolean funcionaSegunda, boolean funcionaTerca, boolean funcionaQuarta, boolean funcionaQuinta, boolean funcionaSexta, boolean funcionaSabado, boolean funcionaDomingo, int tempoMinimoAntecedenciaMinutos, int tempoMaximoAgendamentoDias) {
+    public ConfiguracaoSistema validaCamposEntrada(LocalTime horarioAbertura, LocalTime horarioFechamento, int intervaloServicoMinutos, boolean funcionaSegunda, boolean funcionaTerca, boolean funcionaQuarta, boolean funcionaQuinta, boolean funcionaSexta, boolean funcionaSabado, boolean funcionaDomingo, int tempoMinimoAntecedenciaMinutos, int tempoMaximoAgendamentoDias) {
 
         if (horarioAbertura == null) {
             throw new ConfiguracaoException("Horário de abertura não pode estar em branco.");
@@ -20,8 +20,8 @@ public class ValidateConfiguracao {
             throw new ConfiguracaoException("Horário de fechamento deve ser posterior ao horário de abertura.");
         }
         
-        if (intervaloConsultaMinutos < 15 || intervaloConsultaMinutos > 120) {
-            throw new ConfiguracaoException("Intervalo de consulta deve estar entre 15 e 120 minutos.");
+        if (intervaloServicoMinutos < 15 || intervaloServicoMinutos > 120) {
+            throw new ConfiguracaoException("Intervalo de servico deve estar entre 15 e 120 minutos.");
         }
         
         if (!funcionaSegunda && !funcionaTerca && !funcionaQuarta && 
@@ -37,7 +37,7 @@ public class ValidateConfiguracao {
             throw new ConfiguracaoException("Tempo máximo de agendamento deve estar entre 1 e 365 dias.");
         }
         
-        return new ConfiguracaoSistema(1, horarioAbertura, horarioFechamento, intervaloConsultaMinutos, funcionaSegunda, funcionaTerca, funcionaQuarta, funcionaQuinta, funcionaSexta, funcionaSabado, funcionaDomingo, tempoMinimoAntecedenciaMinutos, tempoMaximoAgendamentoDias);
+        return new ConfiguracaoSistema(1, horarioAbertura, horarioFechamento, intervaloServicoMinutos, funcionaSegunda, funcionaTerca, funcionaQuarta, funcionaQuinta, funcionaSexta, funcionaSabado, funcionaDomingo, tempoMinimoAntecedenciaMinutos, tempoMaximoAgendamentoDias);
 
     }
 

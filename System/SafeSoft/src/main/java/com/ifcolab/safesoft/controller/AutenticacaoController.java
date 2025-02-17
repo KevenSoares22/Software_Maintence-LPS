@@ -14,7 +14,6 @@ public class AutenticacaoController {
     private final TecnicoDAO tecnicoDAO;
     private final SuporteDAO SuporteDAO;
     private final ClienteDAO clienteDAO;
-    private final RecepcionistaDAO recepcionistaDAO;
     private final AdminDAO adminDAO;
     private final Autenticacao autenticacao;
     private final GerenciadorCriptografia gerenciadorCriptografia;
@@ -24,7 +23,6 @@ public class AutenticacaoController {
         this.tecnicoDAO = new TecnicoDAO();
         this.SuporteDAO = new SuporteDAO();
         this.clienteDAO = new ClienteDAO();
-        this.recepcionistaDAO = new RecepcionistaDAO();
         this.adminDAO = new AdminDAO();
         this.autenticacao = Autenticacao.getInstance();
         this.gerenciadorCriptografia = new GerenciadorCriptografia();
@@ -55,9 +53,6 @@ public class AutenticacaoController {
         }
         if (usuario == null) {
             usuario = clienteDAO.findByEmail(email);
-        }
-        if (usuario == null) {
-            usuario = recepcionistaDAO.findByEmail(email);
         }
 
         if (usuario == null) {
@@ -111,10 +106,6 @@ public class AutenticacaoController {
         return isSuporte() ? (Suporte) autenticacao.getUsuario() : null;
     }
 
-    public Recepcionista getRecepcionistaLogado() {
-        return isRecepcionista() ? (Recepcionista) autenticacao.getUsuario() : null;
-    }
-
     public Cliente getClienteLogado() {
         return isCliente() ? (Cliente) autenticacao.getUsuario() : null;
     }
@@ -133,9 +124,6 @@ public class AutenticacaoController {
             }
             else if (usuario instanceof Cliente) {
                 clienteDAO.update((Cliente) usuario);
-            }
-            else if (usuario instanceof Recepcionista) {
-                recepcionistaDAO.update((Recepcionista) usuario);
             }
 
             else if (usuario instanceof Admin) {
@@ -172,11 +160,9 @@ public class AutenticacaoController {
                 SuporteDAO.update((Suporte) usuario);
             }
             else if (usuario instanceof Cliente) {
-                clienteDAO.update((Cliente) usuario);
-            }
-            else if (usuario instanceof Recepcionista) {
-                recepcionistaDAO.update((Recepcionista) usuario);
-            }
+                clienteDAO.update((Cliente) usuario);}
+
+
             else if (usuario instanceof Admin) {
                 adminDAO.update((Admin) usuario);
             }
@@ -200,9 +186,7 @@ public class AutenticacaoController {
         if (usuario == null) {
             usuario = clienteDAO.findByEmail(email);
         }
-        if (usuario == null) {
-            usuario = recepcionistaDAO.findByEmail(email);
-        }
+
         if (usuario == null) {
             usuario = adminDAO.findByEmail(email);
         }

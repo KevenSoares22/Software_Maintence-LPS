@@ -21,7 +21,7 @@ public class pnlMeusServicos extends javax.swing.JPanel {
     }
     
     private void configurarComponentes() {
-        lblSubtituloGerenciaTecnicos.setText("Visualize todas as suas consultas agendadas.");
+        lblSubtituloGerenciaTecnicos.setText("Visualize todas as suas servicos agendadas.");
         
         grdMeusServicos.setShowGrid(false);
         grdMeusServicos.setShowHorizontalLines(true);

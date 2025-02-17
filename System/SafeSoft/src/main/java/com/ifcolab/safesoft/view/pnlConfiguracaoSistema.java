@@ -199,7 +199,7 @@ public class pnlConfiguracaoSistema extends javax.swing.JPanel {
         lblDias.setBounds(340, 500, 190, 17);
 
         lblIntervaloServico1.setForeground(new java.awt.Color(51, 51, 51));
-        lblIntervaloServico1.setText("Intervalo entre consultas");
+        lblIntervaloServico1.setText("Intervalo entre servicos");
         add(lblIntervaloServico1);
         lblIntervaloServico1.setBounds(40, 190, 190, 17);
 

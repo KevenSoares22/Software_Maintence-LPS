@@ -84,7 +84,7 @@ public class DlgRelatorio extends javax.swing.JDialog {
             Relatorio relatorioAtual = controller.buscarRelatorioDaServico();
             if (relatorioAtual == null) {
                 JOptionPane.showMessageDialog(this, 
-                    "Não há relatório salvo para esta consulta.", 
+                    "Não há relatório salvo para esta servico.", 
                     "Aviso", 
                     JOptionPane.WARNING_MESSAGE);
                 return;
