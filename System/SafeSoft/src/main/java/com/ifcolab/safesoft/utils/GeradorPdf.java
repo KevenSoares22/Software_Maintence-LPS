@@ -213,18 +213,8 @@ public class GeradorPdf implements IGeradorDocumento {
             documento.add(new Paragraph("Detalhes do Item", SUBTITULO));
             adicionarLinha(documento, "Tipo:", item.getTipo().toString());
             adicionarLinha(documento, "Descrição:", item.getDescricao());
-            adicionarLinha(documento, "Duração:", item.getDuracaoEstimada().toHours() + "h" + 
-                item.getDuracaoEstimada().toMinutesPart() + "min");
-            
-            if (item.getRequisitos() != null && !item.getRequisitos().isEmpty()) {
-                documento.add(new Paragraph("\nRequisitos:", DESTAQUE));
-                documento.add(new Paragraph(item.getRequisitos(), NORMAL));
-            }
-            
-            if (item.getContraindicacoes() != null && !item.getContraindicacoes().isEmpty()) {
-                documento.add(new Paragraph("\nContraindicações:", DESTAQUE));
-                documento.add(new Paragraph(item.getContraindicacoes(), NORMAL));
-            }
+
+
             documento.add(new Paragraph("\n"));
             
  
@@ -239,15 +229,7 @@ public class GeradorPdf implements IGeradorDocumento {
                 documento.add(new Paragraph("\n"));
             }
             
-     
-            if (item.getIntervaloRetornoDias() > 0) {
-                documento.add(new Paragraph("Retorno", SUBTITULO));
-                LocalDateTime dataRetorno = servico.getDataHora().plusDays(item.getIntervaloRetornoDias());
-                adicionarLinha(documento, "Retorno recomendado após:", 
-                    item.getIntervaloRetornoDias() + " dias (" + 
-                    dataRetorno.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ")");
-                documento.add(new Paragraph("\n"));
-            }
+
             
        
             Paragraph rodape = new Paragraph(

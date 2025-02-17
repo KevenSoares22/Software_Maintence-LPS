@@ -1,21 +1,24 @@
 package com.ifcolab.safesoft.model.enums;
 
 public enum TipoItem {
-    BOTOX("Botox"),
-    PREENCHIMENTO_FACIAL("Preenchimento Facial"),
-    LIMPEZA_DE_PELE("Limpeza de Pele"),
-    PEELING_QUIMICO("Peeling Químico"),
-    MICROAGULHAMENTO("Microagulhamento"),
-    RADIOFREQUENCIA("Radiofrequência"),
-    DEPILACAO_LASER("Depilação a Laser"),
-    CARBOXITERAPIA("Carboxiterapia"),
-    DRENAGEM_LINFATICA("Drenagem Linfática"),
-    MASSAGEM_MODELADORA("Massagem Modeladora"),
-    CRIOLIPÓLISE("Criolipólise"),
-    ULTRASSOM_FOCADO("Ultrassom Focado"),
-    LIFTING_NAO_CIRURGICO("Lifting Não Cirúrgico"),
-    HIDRATACAO_FACIAL("Hidratação Facial"),
-    TRATAMENTO_ACNE("Tratamento para Acne");
+    PLACA_MAE("Placa-mãe"),
+    PROCESSADOR("Processador"),
+    MEMORIA_RAM("Memória RAM"),
+    HD_SSD("HD / SSD"),
+    FONTE_ALIMENTACAO("Fonte de Alimentação"),
+    PLACA_VIDEO("Placa de Vídeo"),
+    COOLER("Cooler"),
+    PASTA_TERMICA("Pasta Térmica"),
+    MONITOR("Monitor"),
+    TECLADO("Teclado"),
+    MOUSE("Mouse"),
+    IMPRESSORA("Impressora"),
+    NOBREAK("Nobreak"),
+    CABOS_CONECTORES("Cabos e Conectores"),
+    LIMPEZA_INTERNA("Limpeza Interna"),
+    TROCA_COMPONENTES("Troca de Componentes"),
+    TESTE_DESEMPENHO("Teste de Desempenho"),
+    ATUALIZACAO_SOFTWARE("Atualização de Software");
 
     private final String descricao;
 

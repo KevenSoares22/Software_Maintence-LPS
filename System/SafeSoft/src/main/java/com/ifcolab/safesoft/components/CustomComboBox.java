@@ -21,7 +21,7 @@ public class CustomComboBox<E> extends JComboBox<E> {
     
     private void setupComboBox() {
         // Configurar fonte
-        setFont(new Font("Fira Sans", Font.PLAIN, 14));
+        setFont(new Font("Segoe UI", Font.PLAIN, 14));
         
         // Configurar cores
         setBackground(Color.WHITE);
@@ -66,7 +66,7 @@ public class CustomComboBox<E> extends JComboBox<E> {
                 JLabel label = (JLabel) super.getListCellRendererComponent(
                         list, value, index, isSelected, cellHasFocus);
                 
-                label.setFont(new Font("Fira Sans", Font.PLAIN, 14));
+                label.setFont(new Font("Segoe UI", Font.PLAIN, 14));
                 
                 if (isSelected) {
                     label.setBackground(new Color(240, 240, 240));

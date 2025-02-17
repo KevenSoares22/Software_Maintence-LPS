@@ -216,7 +216,6 @@ public class DlgNovoServico extends javax.swing.JDialog {
         lblBackgroundTabela = new javax.swing.JLabel();
         lblBackgroundCadastro = new javax.swing.JLabel();
         lblBackground = new javax.swing.JLabel();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1350, 870));
         getContentPane().setLayout(null);
@@ -224,44 +223,44 @@ public class DlgNovoServico extends javax.swing.JDialog {
         lblCPF.setForeground(new java.awt.Color(51, 51, 51));
         lblCPF.setText("Selecionar Suporte");
         getContentPane().add(lblCPF);
-        lblCPF.setBounds(710, 120, 190, 17);
+        lblCPF.setBounds(960, 120, 190, 17);
 
         lblNome.setForeground(new java.awt.Color(51, 51, 51));
         lblNome.setText("Selecionar Cliente");
         getContentPane().add(lblNome);
-        lblNome.setBounds(70, 120, 220, 17);
+        lblNome.setBounds(60, 120, 220, 17);
 
         lblEmail.setForeground(new java.awt.Color(51, 51, 51));
         lblEmail.setText("Selecionar Tecnico");
         getContentPane().add(lblEmail);
-        lblEmail.setBounds(390, 120, 170, 17);
+        lblEmail.setBounds(400, 120, 170, 17);
 
         lblItensSelecionados.setForeground(new java.awt.Color(51, 51, 51));
         lblItensSelecionados.setText("Itens Selecionados");
         getContentPane().add(lblItensSelecionados);
-        lblItensSelecionados.setBounds(990, 190, 290, 17);
+        lblItensSelecionados.setBounds(1020, 200, 290, 17);
 
         lblData.setForeground(new java.awt.Color(51, 51, 51));
         lblData.setText("Hora");
         getContentPane().add(lblData);
-        lblData.setBounds(70, 260, 110, 17);
+        lblData.setBounds(80, 260, 110, 17);
 
         lblDataNascimento.setForeground(new java.awt.Color(51, 51, 51));
         lblDataNascimento.setText("Selecionar Item");
         getContentPane().add(lblDataNascimento);
-        lblDataNascimento.setBounds(990, 120, 230, 17);
+        lblDataNascimento.setBounds(1020, 120, 230, 17);
 
         lblHora.setForeground(new java.awt.Color(51, 51, 51));
         lblHora.setText("Data");
         getContentPane().add(lblHora);
-        lblHora.setBounds(70, 190, 130, 17);
+        lblHora.setBounds(80, 190, 130, 17);
 
         txtObeservacoes.setColumns(20);
         txtObeservacoes.setRows(5);
         txtObservacoesScrollPane.setViewportView(txtObeservacoes);
 
         getContentPane().add(txtObservacoesScrollPane);
-        txtObservacoesScrollPane.setBounds(240, 206, 720, 130);
+        txtObservacoesScrollPane.setBounds(250, 200, 720, 130);
 
         fEdtHora.setText("Hora");
         fEdtHora.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -270,7 +269,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
             }
         });
         getContentPane().add(fEdtHora);
-        fEdtHora.setBounds(60, 280, 160, 38);
+        fEdtHora.setBounds(70, 280, 160, 38);
 
         fEdtData.setText("Data");
         fEdtData.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -279,9 +278,9 @@ public class DlgNovoServico extends javax.swing.JDialog {
             }
         });
         getContentPane().add(fEdtData);
-        fEdtData.setBounds(60, 210, 160, 38);
+        fEdtData.setBounds(70, 210, 160, 38);
         getContentPane().add(cbxSelecionarItem);
-        cbxSelecionarItem.setBounds(980, 140, 250, 44);
+        cbxSelecionarItem.setBounds(1000, 140, 250, 44);
 
         cbxSelecionarSuporte.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
@@ -289,7 +288,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
             }
         });
         getContentPane().add(cbxSelecionarSuporte);
-        cbxSelecionarSuporte.setBounds(700, 140, 250, 44);
+        cbxSelecionarSuporte.setBounds(730, 140, 250, 44);
 
         cbxSelecionarTecnico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,8 +302,9 @@ public class DlgNovoServico extends javax.swing.JDialog {
         });
         getContentPane().add(cbxSelecionarTecnico);
         cbxSelecionarTecnico.setBounds(380, 140, 290, 44);
+
         getContentPane().add(cbxSelecionarCliente);
-        cbxSelecionarCliente.setBounds(60, 140, 290, 44);
+        cbxSelecionarCliente.setBounds(80, 140, 290, 44);
 
         btnAdicionarItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/addsquare.png"))); // NOI18N
         btnAdicionarItem.setText("");
@@ -326,7 +326,6 @@ public class DlgNovoServico extends javax.swing.JDialog {
         getContentPane().add(btnAdicionar);
         btnAdicionar.setBounds(60, 80, 170, 30);
 
-        btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save.png"))); // NOI18N
         btnSalvar.setText(" Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -393,13 +392,13 @@ public class DlgNovoServico extends javax.swing.JDialog {
         getContentPane().add(tmServicos);
         tmServicos.setBounds(40, 366, 1260, 430);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Agende novas consultas vinculando clientes, profissionais e horários disponíveis.");
         getContentPane().add(lblSubtituloGerenciaTecnicos);
         lblSubtituloGerenciaTecnicos.setBounds(30, 40, 550, 17);
 
-        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnicos.setText("Nova Servico");
         getContentPane().add(lblTitleGerenciaTecnicos);

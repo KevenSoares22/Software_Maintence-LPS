@@ -85,19 +85,13 @@ public class DlgGerenciaItem extends javax.swing.JDialog {
         
         edtDescricao.setText(item.getDescricao());
         
-        // Formata duração HH:mm
-        long horas = item.getDuracaoEstimada().toHours();
-        long minutos = item.getDuracaoEstimada().toMinutesPart();
-        fEdtDuracaoEstimada.setText(String.format("%02d:%02d", horas, minutos));
+
         
         // Formata valor em reais
         fEdtValor.setText(decimalFormat.format(item.getValor()));
         
-        edtRequisitos.setText(item.getRequisitos());
-        edtContraIndicacoes.setText(item.getContraindicacoes());
-        
         cboTipo.setSelectedItem(item.getTipo());
-        spnIntervaloRetorno.setValue(item.getIntervaloRetornoDias());
+
     }
 
     private Object getObjetoSelecionadoNaGrid() {
@@ -277,13 +271,13 @@ public class DlgGerenciaItem extends javax.swing.JDialog {
         getContentPane().add(lblBackgroundTabela);
         lblBackgroundTabela.setBounds(-10, 330, 1350, 500);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Configure e mantenha a lista de itens disponíveis, detalhando preços, duração, requisitos entre outros.");
         getContentPane().add(lblSubtituloGerenciaTecnicos);
         lblSubtituloGerenciaTecnicos.setBounds(30, 40, 750, 17);
 
-        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnicos.setText("Gerenciar Items");
         getContentPane().add(lblTitleGerenciaTecnicos);

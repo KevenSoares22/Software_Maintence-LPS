@@ -23,8 +23,8 @@ public class CustomTable extends JTable implements Serializable {
     
     private void setupTable() {
         
-        setFont(new Font("Fira Sans", Font.PLAIN, 14));
-        getTableHeader().setFont(new Font("Fira Sans", Font.HANGING_BASELINE, 14));
+        setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        getTableHeader().setFont(new Font("Segoe UI", Font.HANGING_BASELINE, 14));
         
         setBackground(Colors.WHITE);
         setForeground(Colors.GRAY_500);

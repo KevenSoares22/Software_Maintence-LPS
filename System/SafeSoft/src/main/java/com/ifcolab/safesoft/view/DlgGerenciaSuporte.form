@@ -318,7 +318,7 @@
     <Component class="javax.swing.JLabel" name="lblSubtituloGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Fira Sans Medium" size="13" style="0"/>
+          <Font name="Segoe UI Medium" size="13" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -334,7 +334,7 @@
     <Component class="javax.swing.JLabel" name="lblTitleGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Fira Sans SemiBold" size="18" style="0"/>
+          <Font name="Segoe UI SemiBold" size="18" style="0"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="33" type="rgb"/>

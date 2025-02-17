@@ -42,13 +42,13 @@ public class DlgTrocarSenha extends javax.swing.JDialog {
         pnlBackground.setBackground(new java.awt.Color(255, 255, 255));
         pnlBackground.setLayout(null);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Troque sua senha e fique ainda mais seguro.");
         pnlBackground.add(lblSubtituloGerenciaTecnicos);
         lblSubtituloGerenciaTecnicos.setBounds(30, 40, 550, 17);
 
-        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnicos.setText("Modifique sua senha");
         pnlBackground.add(lblTitleGerenciaTecnicos);

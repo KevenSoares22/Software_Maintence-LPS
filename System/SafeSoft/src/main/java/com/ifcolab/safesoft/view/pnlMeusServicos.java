@@ -56,13 +56,13 @@ public class pnlMeusServicos extends javax.swing.JPanel {
         add(lblAvatar);
         lblAvatar.setBounds(30, 450, 170, 0);
 
-        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnicos.setText("Minhas Servicos");
         add(lblTitleGerenciaTecnicos);
         lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Personalize seu perfil ao seu gosto.");
         add(lblSubtituloGerenciaTecnicos);

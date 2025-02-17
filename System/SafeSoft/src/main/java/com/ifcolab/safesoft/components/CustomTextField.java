@@ -25,7 +25,7 @@ public class CustomTextField extends JFormattedTextField {
     
     private void setupTextField() {
 
-        setFont(new Font("Fira Sans", Font.PLAIN, 14));
+        setFont(new Font("Segoe UI", Font.PLAIN, 14));
         
         setBackground(Color.WHITE);
         setForeground(new Color(111, 111, 111)); // Texto em cinza escuro

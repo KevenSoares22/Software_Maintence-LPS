@@ -44,13 +44,13 @@ public class DlgEsqueceuSenha extends javax.swing.JDialog {
         btnCancelar.addActionListener(this::btnCancelarActionPerformed);
         getContentPane().add(btnCancelar);
 
-        jLabel6.setFont(new java.awt.Font("Fira Sans", 0, 12));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12));
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("E-mail");
         jLabel6.setBounds(490, 320, 110, 16);
         getContentPane().add(jLabel6);
 
-        lblTitutoSidebar.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18));
+        lblTitutoSidebar.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18));
         lblTitutoSidebar.setForeground(new java.awt.Color(0, 0, 0));
         lblTitutoSidebar.setText("Recupere sua senha fornecendo seu e-mail");
         lblTitutoSidebar.setBounds(490, 270, 380, 20);

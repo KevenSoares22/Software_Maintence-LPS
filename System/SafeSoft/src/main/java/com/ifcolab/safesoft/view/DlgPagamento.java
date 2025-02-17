@@ -86,7 +86,7 @@ public class DlgPagamento extends javax.swing.JDialog {
     
     private void adicionarLabel(JPanel panel, String texto) {
         JLabel label = new JLabel(texto);
-        label.setFont(new Font("Fira Sans", Font.PLAIN, 12));
+        label.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         label.setAlignmentX(Component.LEFT_ALIGNMENT);
         panel.add(label);
         panel.add(Box.createRigidArea(new Dimension(0, 5)));
@@ -118,13 +118,13 @@ public class DlgPagamento extends javax.swing.JDialog {
         pnlBackground.setBackground(new java.awt.Color(255, 255, 255));
         pnlBackground.setLayout(null);
 
-        lblSubtituloGerenciaTecnico.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnico.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnico.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnico.setText("Escolha a forma de pagamento, visualize e confirme.");
         pnlBackground.add(lblSubtituloGerenciaTecnico);
         lblSubtituloGerenciaTecnico.setBounds(30, 40, 550, 17);
 
-        lblTitleGerenciaTecnico.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnico.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnico.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnico.setText("Realizar Pagamento");
         pnlBackground.add(lblTitleGerenciaTecnico);

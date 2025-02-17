@@ -31,11 +31,11 @@ public class FrLogin extends javax.swing.JFrame {
         lblSafeSoft = new javax.swing.JLabel();
         lblBackground = new javax.swing.JLabel();
 
-        jLabel5.setFont(new java.awt.Font("Fira Sans", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("Senha");
 
-        jLabel6.setFont(new java.awt.Font("Fira Sans", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("E-mail");
 
@@ -84,7 +84,7 @@ public class FrLogin extends javax.swing.JFrame {
                 lblEsqueceuSenhaMouseClicked(evt);
             }
         });
-        lblEsqueceuSenha.setBounds(x + 140, y + 260, 200, 20); // Movido ligeiramente para a direita
+        lblEsqueceuSenha.setBounds(x + 130, y + 260, 200, 20); // Movido ligeiramente para a direita
         getContentPane().add(lblEsqueceuSenha);
 
         lblLine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Line.png"))); // NOI18N
@@ -100,11 +100,11 @@ public class FrLogin extends javax.swing.JFrame {
             lblSafeSoft.setFont(lobsterFont);
         } catch (Exception e) {
             // Se não conseguir carregar a fonte, usa uma fonte padrão
-            lblSafeSoft.setFont(new Font("Fira Sans", Font.BOLD, 60));
+            lblSafeSoft.setFont(new Font("Segoe UI", Font.BOLD, 60));
         }
 
-        lblSafeSoft.setForeground(new Color(0, 51, 102)); // Cor azul escuro
-        lblSafeSoft.setBounds(x + 100, y - 60, 350, 80); // Ajuste de posição para ficar um pouco mais para baixo
+        lblSafeSoft.setForeground(new Color(0, 51, 0)); // Verde
+        lblSafeSoft.setBounds(x + 70, y - 60, 350, 80); // Ajuste de posição para ficar um pouco mais para baixo
         getContentPane().add(lblSafeSoft);
 
         lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.png"))); // NOI18N

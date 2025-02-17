@@ -260,7 +260,6 @@ public class DlgGerenciaTecnico extends javax.swing.JDialog {
         getContentPane().add(edtEndereco);
         edtEndereco.setBounds(300, 210, 380, 40);
 
-        btnAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/addsquare.png"))); // NOI18N
         btnAdicionar.setText(" Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -270,7 +269,6 @@ public class DlgGerenciaTecnico extends javax.swing.JDialog {
         getContentPane().add(btnAdicionar);
         btnAdicionar.setBounds(60, 80, 170, 30);
 
-        btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save.png"))); // NOI18N
         btnSalvar.setText(" Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -280,7 +278,6 @@ public class DlgGerenciaTecnico extends javax.swing.JDialog {
         getContentPane().add(btnSalvar);
         btnSalvar.setBounds(690, 80, 170, 30);
 
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editsquare.png"))); // NOI18N
         btnEditar.setText(" Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,7 +287,6 @@ public class DlgGerenciaTecnico extends javax.swing.JDialog {
         getContentPane().add(btnEditar);
         btnEditar.setBounds(270, 80, 170, 30);
 
-        btnRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/trash.png"))); // NOI18N
         btnRemover.setText(" Remover");
         btnRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -325,13 +321,13 @@ public class DlgGerenciaTecnico extends javax.swing.JDialog {
         getContentPane().add(tmTecnicos);
         tmTecnicos.setBounds(40, 380, 1260, 420);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Adicione, edite ou remova informações dos tecnicos, incluindo especialidades e dados de contato.");
         getContentPane().add(lblSubtituloGerenciaTecnicos);
         lblSubtituloGerenciaTecnicos.setBounds(30, 40, 780, 17);
 
-        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnicos.setText("Gerenciar Tecnicos");
         getContentPane().add(lblTitleGerenciaTecnicos);

@@ -19,8 +19,8 @@ public class PnlAppBar extends javax.swing.JPanel {
 
     private final AutenticacaoController authController;
     private final Color BACKGROUND_COLOR = new Color(255, 255, 255);
-    private final Font NAME_FONT = new Font("Fira Sans", Font.BOLD, 14);
-    private final Font TYPE_FONT = new Font("Fira Sans", Font.PLAIN, 12);
+    private final Font NAME_FONT = new Font("Segoe UI", Font.BOLD, 14);
+    private final Font TYPE_FONT = new Font("Segoe UI", Font.PLAIN, 12);
     
     /**
      * Creates new form AppBar

@@ -238,7 +238,6 @@ public class DlgGerenciaSuporte extends javax.swing.JDialog {
         getContentPane().add(edtEndereco);
         edtEndereco.setBounds(290, 230, 390, 40);
 
-        btnAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/addsquare.png"))); // NOI18N
         btnAdicionar.setText(" Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,7 +247,6 @@ public class DlgGerenciaSuporte extends javax.swing.JDialog {
         getContentPane().add(btnAdicionar);
         btnAdicionar.setBounds(60, 80, 170, 30);
 
-        btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save.png"))); // NOI18N
         btnSalvar.setText(" Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,7 +256,6 @@ public class DlgGerenciaSuporte extends javax.swing.JDialog {
         getContentPane().add(btnSalvar);
         btnSalvar.setBounds(690, 80, 170, 30);
 
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editsquare.png"))); // NOI18N
         btnEditar.setText(" Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -301,13 +298,13 @@ public class DlgGerenciaSuporte extends javax.swing.JDialog {
         getContentPane().add(tmSuportes);
         tmSuportes.setBounds(40, 370, 1260, 420);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Controle as informações das Suportes e dados pessoais.");
         getContentPane().add(lblSubtituloGerenciaTecnicos);
         lblSubtituloGerenciaTecnicos.setBounds(30, 40, 720, 17);
 
-        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnicos.setText("Gerenciar Suportes");
         getContentPane().add(lblTitleGerenciaTecnicos);

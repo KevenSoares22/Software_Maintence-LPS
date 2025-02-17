@@ -79,13 +79,13 @@ public class DlgFeedback extends javax.swing.JDialog {
         getContentPane().add(lblLogo);
         lblLogo.setBounds(40, 10, 100, 90);
 
-        lblTitulo.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 30)); // NOI18N
+        lblTitulo.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 30)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
         lblTitulo.setText("Feedbacks");
         getContentPane().add(lblTitulo);
         lblTitulo.setBounds(140, 20, 230, 50);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Visualize todos os feedbacks dos clientes.");
         getContentPane().add(lblSubtituloGerenciaTecnicos);

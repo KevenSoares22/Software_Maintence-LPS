@@ -25,7 +25,7 @@ public class SecondaryCustomButton extends JButton implements Serializable {
     
     private void setupButton() {
         // Configurar fonte
-        setFont(new Font("Fira Sans", Font.PLAIN, 14));
+        setFont(new Font("Segoe UI", Font.PLAIN, 14));
         
         setBackground(new Color(0, 0, 0, 0)); // Transparente
         setForeground(Colors.GRAY_500); // Texto em cinza escuro

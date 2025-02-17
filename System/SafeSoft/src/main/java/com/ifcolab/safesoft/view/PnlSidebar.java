@@ -107,7 +107,7 @@ public class PnlSidebar extends javax.swing.JPanel {
         add(lblLogo);
         lblLogo.setBounds(20, 10, 50, 50);
 
-        lblSafeSoft.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblSafeSoft.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblSafeSoft.setForeground(new java.awt.Color(0, 0, 0));
         lblSafeSoft.setText("SafeSoft");
         add(lblSafeSoft);
@@ -232,14 +232,7 @@ public class PnlSidebar extends javax.swing.JPanel {
         add(btnGerenciarPagamentos);
         btnGerenciarPagamentos.setBounds(10, 590, 230, 40);
 
-        btnGerenciarAdmins.setText("Gerenciar Admins");
-        btnGerenciarAdmins.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerenciarAdminsActionPerformed(evt);
-            }
-        });
-        add(btnGerenciarAdmins);
-        btnGerenciarAdmins.setBounds(10, 540, 230, 40);
+
 
         btnHistoricoItem.setText("Historico de Itens");
         btnHistoricoItem.addActionListener(new java.awt.event.ActionListener() {

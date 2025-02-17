@@ -74,25 +74,25 @@ public class DlgFeedbackCliente extends javax.swing.JDialog {
         getContentPane().add(lblLogo);
         lblLogo.setBounds(60, 40, 100, 90);
 
-        lblTitulo.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 30)); // NOI18N
+        lblTitulo.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 30)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
         lblTitulo.setText("Deixe seu Feedback");
         getContentPane().add(lblTitulo);
         lblTitulo.setBounds(70, 130, 640, 88);
 
-        lblSubtitulo.setFont(new java.awt.Font("Fira Sans", 0, 16)); // NOI18N
+        lblSubtitulo.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         lblSubtitulo.setForeground(new java.awt.Color(0, 0, 0));
         lblSubtitulo.setText("Cadastre aqui seu feedback");
         getContentPane().add(lblSubtitulo);
         lblSubtitulo.setBounds(70, 180, 660, 40);
 
-        lblDescricaoFeedback.setFont(new java.awt.Font("Fira Sans", 0, 12)); // NOI18N
+        lblDescricaoFeedback.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         lblDescricaoFeedback.setForeground(new java.awt.Color(51, 51, 51));
         lblDescricaoFeedback.setText("Descrição");
         getContentPane().add(lblDescricaoFeedback);
         lblDescricaoFeedback.setBounds(60, 470, 70, 16);
 
-        lblTituloFeedback.setFont(new java.awt.Font("Fira Sans", 0, 12)); // NOI18N
+        lblTituloFeedback.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         lblTituloFeedback.setForeground(new java.awt.Color(51, 51, 51));
         lblTituloFeedback.setText("Selecionar item");
         getContentPane().add(lblTituloFeedback);
@@ -106,13 +106,13 @@ public class DlgFeedbackCliente extends javax.swing.JDialog {
         getContentPane().add(btnSeusFeedbacks);
         btnSeusFeedbacks.setBounds(920, 50, 200, 30);
 
-        lblTituloFeedback1.setFont(new java.awt.Font("Fira Sans", 0, 12)); // NOI18N
+        lblTituloFeedback1.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         lblTituloFeedback1.setForeground(new java.awt.Color(51, 51, 51));
         lblTituloFeedback1.setText("Titulo");
         getContentPane().add(lblTituloFeedback1);
         lblTituloFeedback1.setBounds(60, 390, 110, 16);
 
-        lblTituloFeedback2.setFont(new java.awt.Font("Fira Sans", 0, 12)); // NOI18N
+        lblTituloFeedback2.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         lblTituloFeedback2.setForeground(new java.awt.Color(51, 51, 51));
         lblTituloFeedback2.setText("Avaliar");
         getContentPane().add(lblTituloFeedback2);

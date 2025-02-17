@@ -43,13 +43,13 @@ public class PnlAgenda extends javax.swing.JPanel {
         setBounds(0, 0, 1040, 730);
         
         JLabel lblTitle = new JLabel("Serviços");
-        lblTitle.setFont(new Font("Fira Sans SemiBold", Font.PLAIN, 18));
+        lblTitle.setFont(new Font("Segoe UI SemiBold", Font.PLAIN, 18));
         lblTitle.setForeground(new Color(51, 51, 51));
         lblTitle.setBounds(30, 20, 210, 22);
         add(lblTitle);
         
         JLabel lblSubtitle = new JLabel("Visualize e gerencie as servico agendadas.");
-        lblSubtitle.setFont(new Font("Fira Sans Medium", Font.PLAIN, 13));
+        lblSubtitle.setFont(new Font("Segoe UI Medium", Font.PLAIN, 13));
         lblSubtitle.setForeground(new Color(102, 102, 102));
         lblSubtitle.setBounds(30, 40, 720, 17);
         add(lblSubtitle);
@@ -68,7 +68,7 @@ public class PnlAgenda extends javax.swing.JPanel {
         btnAnterior = new SecondaryCustomButton("←");
         btnProximo = new SecondaryCustomButton("→");
         lblMes = new JLabel();
-        lblMes.setFont(new Font("Fira Sans", Font.BOLD, 16));
+        lblMes.setFont(new Font("Segoe UI", Font.BOLD, 16));
         
         btnAnterior.addActionListener(e -> {
             dataAtual = dataAtual.minusDays(1);
@@ -129,18 +129,12 @@ public class PnlAgenda extends javax.swing.JPanel {
         panel.setBackground(Color.WHITE);
         panel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(230, 230, 230)));
         
-        JLabel lblHora = new JLabel(hora.format(DateTimeFormatter.ofPattern("HH:mm")));
-        lblHora.setFont(new Font("Fira Sans", Font.BOLD, 14));
-        lblHora.setPreferredSize(new Dimension(80, 30));
-        lblHora.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
-        
+
         JPanel pnlServicos = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 5));
         pnlServicos.setBackground(Color.WHITE);
         
         panel.setMinimumSize(new Dimension(980, 100));
         panel.setPreferredSize(new Dimension(980, 100));
-        
-        panel.add(lblHora, BorderLayout.WEST);
         panel.add(pnlServicos, BorderLayout.CENTER);
         
         return panel;
@@ -190,8 +184,8 @@ public class PnlAgenda extends javax.swing.JPanel {
         JLabel lblTecnico = new JLabel("Tecnico: " + servico.getTecnico().getNome());
         JLabel lblSuporte = new JLabel("Suporte: " + servico.getSuporte().getNome());
         
-        Font labelFont = new Font("Fira Sans", Font.PLAIN, 11);
-        Font statusFont = new Font("Fira Sans", Font.BOLD, 11);
+        Font labelFont = new Font("Segoe UI", Font.PLAIN, 11);
+        Font statusFont = new Font("Segoe UI", Font.BOLD, 11);
         
         lblStatus.setFont(statusFont);
         lblCliente.setFont(labelFont);

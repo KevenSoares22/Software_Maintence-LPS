@@ -44,7 +44,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
         mainPanel.setBackground(Color.WHITE);
         
         JLabel lblTitulo = new JLabel("Detalhes da Servico");
-        lblTitulo.setFont(new Font("Fira Sans SemiBold", Font.PLAIN, 18));
+        lblTitulo.setFont(new Font("Segoe UI SemiBold", Font.PLAIN, 18));
         lblTitulo.setForeground(new Color(51, 51, 51));
         lblTitulo.setAlignmentX(Component.CENTER_ALIGNMENT);
         mainPanel.add(lblTitulo);
@@ -73,7 +73,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
         ));
         
         JLabel lblStatus = new JLabel("Status: " + controller.getStatusFormatado());
-        lblStatus.setFont(new Font("Fira Sans", Font.BOLD, 14));
+        lblStatus.setFont(new Font("Segoe UI", Font.BOLD, 14));
         definirCorStatus(lblStatus, controller.getStatus());
         panel.add(lblStatus);
         panel.add(Box.createRigidArea(new Dimension(0, 10)));
@@ -88,14 +88,14 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
             panel.add(Box.createRigidArea(new Dimension(0, 10)));
             JLabel lblItens = new JLabel("<html><b>Itens:</b><br/>" +
                 String.join("<br/>• ", items) + "</html>");
-            lblItens.setFont(new Font("Fira Sans", Font.PLAIN, 14));
+            lblItens.setFont(new Font("Segoe UI", Font.PLAIN, 14));
             panel.add(lblItens);
         }
         
         panel.add(Box.createRigidArea(new Dimension(0, 15)));
         JLabel lblValorTotal = new JLabel("Valor Total: R$ " + 
             String.format("%.2f", controller.getValorTotal()));
-        lblValorTotal.setFont(new Font("Fira Sans", Font.BOLD, 14));
+        lblValorTotal.setFont(new Font("Segoe UI", Font.BOLD, 14));
         panel.add(lblValorTotal);
         
         return panel;
@@ -121,7 +121,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
     private void adicionarLabel(JPanel panel, String texto) {
         panel.add(Box.createRigidArea(new Dimension(0, 5)));
         JLabel label = new JLabel(texto);
-        label.setFont(new Font("Fira Sans", Font.PLAIN, 14));
+        label.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         panel.add(label);
     }
     

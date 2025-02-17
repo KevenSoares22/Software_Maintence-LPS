@@ -155,19 +155,19 @@ public class pnlConfiguracaoSistema extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 18)); // NOI18N
         lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
         lblTitleGerenciaTecnicos.setText("Configurações");
         add(lblTitleGerenciaTecnicos);
         lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
-        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Segoe UI Medium", 0, 13)); // NOI18N
         lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
         lblSubtituloGerenciaTecnicos.setText("Controle as informações do Sistemas.");
         add(lblSubtituloGerenciaTecnicos);
         lblSubtituloGerenciaTecnicos.setBounds(30, 40, 720, 17);
 
-        lblHorarioFuncionamento1.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 14)); // NOI18N
+        lblHorarioFuncionamento1.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 14)); // NOI18N
         lblHorarioFuncionamento1.setForeground(new java.awt.Color(51, 51, 51));
         lblHorarioFuncionamento1.setText("Horário de Funcionamento");
         add(lblHorarioFuncionamento1);
@@ -203,7 +203,7 @@ public class pnlConfiguracaoSistema extends javax.swing.JPanel {
         add(lblIntervaloServico1);
         lblIntervaloServico1.setBounds(40, 190, 190, 17);
 
-        lblHorarioFuncionamento2.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 14)); // NOI18N
+        lblHorarioFuncionamento2.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 14)); // NOI18N
         lblHorarioFuncionamento2.setForeground(new java.awt.Color(51, 51, 51));
         lblHorarioFuncionamento2.setText("Dias de Funcionamento");
         add(lblHorarioFuncionamento2);
@@ -247,7 +247,7 @@ public class pnlConfiguracaoSistema extends javax.swing.JPanel {
         add(chkDomingo);
         chkDomingo.setBounds(850, 310, 100, 21);
 
-        lblHorarioFuncionamento.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 14)); // NOI18N
+        lblHorarioFuncionamento.setFont(new java.awt.Font("Segoe UI SemiBold", 0, 14)); // NOI18N
         lblHorarioFuncionamento.setForeground(new java.awt.Color(51, 51, 51));
         lblHorarioFuncionamento.setText("Outras Configurações");
         add(lblHorarioFuncionamento);
