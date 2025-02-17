@@ -51,18 +51,18 @@ public class RecepcionistaController {
     private void enviarCredenciaisAcesso(Recepcionista recepcionista, String senhaTemporaria) {
         String mensagem = String.format(
             "Olá %s,\n\n" +
-            "Suas credenciais de acesso ao sistema Estetify foram criadas:\n\n" +
+            "Suas credenciais de acesso ao sistema SafeSoft foram criadas:\n\n" +
             "Email: %s\n" +
             "Senha: %s\n\n" +
             "Por favor, altere sua senha no primeiro acesso.\n\n" +
             "Atenciosamente,\n" +
-            "Equipe Estetify",
+            "Equipe SafeSoft",
             recepcionista.getNome(),
             recepcionista.getEmail(),
             senhaTemporaria
         );
 
-        notificadorEmail.notificar(recepcionista, "Credenciais de Acesso - Estetify", mensagem);
+        notificadorEmail.notificar(recepcionista, "Credenciais de Acesso - SafeSoft", mensagem);
     }
     
     public void atualizar(int id, String nome, String email, String senha, String cpf, 

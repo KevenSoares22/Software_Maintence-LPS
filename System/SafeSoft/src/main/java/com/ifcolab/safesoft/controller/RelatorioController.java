@@ -34,7 +34,7 @@ public class RelatorioController {
     }
     
     public void cadastrar(String resultado, String observacoes, Servico servico, Item item) throws RelatorioException {
-        String caminhoPdf = System.getProperty("user.home") + "/Estetify/relatorios/" + 
+        String caminhoPdf = System.getProperty("user.home") + "/SafeSoft/relatorios/" + 
             String.format("%d_%d_%s",
                 servico.getId(),
                 item.getId(),
@@ -57,7 +57,7 @@ public class RelatorioController {
     }
     
     public void atualizar(int id, String resultado, String observacoes, Servico servico, Item item) throws RelatorioException {
-        String caminhoPdf = System.getProperty("user.home") + "/Estetify/relatorios/" + 
+        String caminhoPdf = System.getProperty("user.home") + "/SafeSoft/relatorios/" + 
             String.format("%d_%d_%s",
                 servico.getId(),
                 item.getId(),

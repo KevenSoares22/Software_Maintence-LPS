@@ -210,20 +210,20 @@ public class AutenticacaoController {
 
         String mensagem = String.format(
                 "Olá %s,\n\n" +
-                        "Você solicitou a recuperação de sua senha do sistema Estetify.\n" +
+                        "Você solicitou a recuperação de sua senha do sistema SafeSoft.\n" +
                         "Uma nova senha temporária foi gerada:\n\n" +
                         "Email: %s\n" +
                         "Nova Senha: %s\n\n" +
                         "Por favor, altere esta senha após realizar o login.\n" +
                         "Caso não tenha solicitado esta recuperação, entre em contato com o Suporte.\n\n" +
                         "Atenciosamente,\n" +
-                        "Equipe Estetify",
+                        "Equipe SafeSoft",
                 usuario.getNome(),
                 usuario.getEmail(),
                 senhaTemporaria
         );
 
-        if (!notificadorEmail.notificar(usuario, "Nova Senha Temporária - Estetify", mensagem)) {
+        if (!notificadorEmail.notificar(usuario, "Nova Senha Temporária - SafeSoft", mensagem)) {
             throw new AutenticacaoException("Erro ao enviar email de recuperação");
         }
     }

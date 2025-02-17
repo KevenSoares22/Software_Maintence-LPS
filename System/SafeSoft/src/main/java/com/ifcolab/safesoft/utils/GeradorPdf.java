@@ -81,15 +81,15 @@ public class GeradorPdf implements IGeradorDocumento {
             PdfWriter.getInstance(documento, new FileOutputStream(caminhoArquivo));
             documento.open();
             
-            Paragraph cabecalho = new Paragraph("ESTETIFY", TITULO);
+            Paragraph cabecalho = new Paragraph("SAFESOFT", TITULO);
             cabecalho.setAlignment(Element.ALIGN_CENTER);
             documento.add(cabecalho);
             
-            Paragraph subtitulo = new Paragraph("Sistema de Gestão de Clínica Estética", RODAPE);
+            Paragraph subtitulo = new Paragraph("Sistema de Gestão  ", RODAPE);
             subtitulo.setAlignment(Element.ALIGN_CENTER);
             documento.add(subtitulo);
             
-            Paragraph cnpj = new Paragraph("CNPJ: 12.345.678/0001-90", RODAPE);
+            Paragraph cnpj = new Paragraph("CNPJ: 11.111.111/0001-88", RODAPE);
             cnpj.setAlignment(Element.ALIGN_CENTER);
             documento.add(cnpj);
             documento.add(new Paragraph("\n"));
@@ -168,16 +168,16 @@ public class GeradorPdf implements IGeradorDocumento {
             PdfWriter.getInstance(documento, new FileOutputStream(caminhoArquivo));
             documento.open();
             
-            Paragraph cabecalho = new Paragraph("ESTETIFY", TITULO);
+            Paragraph cabecalho = new Paragraph("SAFESOFT", TITULO);
             cabecalho.setAlignment(Element.ALIGN_CENTER);
             documento.add(cabecalho);
             
-            Paragraph subtitulo = new Paragraph("Sistema de Gestão de Clínica Estética", RODAPE);
+            Paragraph subtitulo = new Paragraph("Sistema de Gestão  ", RODAPE);
             subtitulo.setAlignment(Element.ALIGN_CENTER);
             documento.add(subtitulo);
             
 
-            Paragraph cnpj = new Paragraph("CNPJ: 12.345.678/0001-90", RODAPE);
+            Paragraph cnpj = new Paragraph("CNPJ: 11.111.111/0001-88", RODAPE);
             cnpj.setAlignment(Element.ALIGN_CENTER);
             documento.add(cnpj);
             documento.add(new Paragraph("\n"));

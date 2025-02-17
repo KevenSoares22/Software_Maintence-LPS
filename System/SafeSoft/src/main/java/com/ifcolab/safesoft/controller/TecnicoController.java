@@ -48,18 +48,18 @@ public class TecnicoController {
     private void enviarCredenciaisAcesso(Tecnico tecnico, String senhaTemporaria) {
         String mensagem = String.format(
             "Olá %s,\n\n" +
-            "Suas credenciais de acesso ao sistema Estetify foram criadas:\n\n" +
+            "Suas credenciais de acesso ao sistema SafeSoft foram criadas:\n\n" +
             "Email: %s\n" +
             "Senha: %s\n\n" +
             "Por favor, altere sua senha no primeiro acesso.\n\n" +
             "Atenciosamente,\n" +
-            "Equipe Estetify",
+            "Equipe SafeSoft",
             tecnico.getNome(),
             tecnico.getEmail(),
             senhaTemporaria
         );
 
-        notificadorEmail.notificar(tecnico, "Credenciais de Acesso - Estetify", mensagem);
+        notificadorEmail.notificar(tecnico, "Credenciais de Acesso - SafeSoft", mensagem);
     }
     
     

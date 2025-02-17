@@ -66,7 +66,7 @@ public class PagamentoController {
             "Forma de Pagamento: %s\n\n" +
             "Agradecemos a preferência!\n\n" +
             "Atenciosamente,\n" +
-            "Equipe Estetify",
+            "Equipe SafeSoft",
             servico.getCliente().getNome(),
             servico.getDataHora().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")),
             servico.getTecnico().getNome(),
@@ -76,7 +76,7 @@ public class PagamentoController {
 
         notificadorEmail.notificar(
             servico.getCliente(),
-            "Confirmação de Pagamento - Estetify", 
+            "Confirmação de Pagamento - SafeSoft", 
             mensagem
         );
     }
@@ -160,7 +160,7 @@ public class PagamentoController {
         }
         
         // Criar caminho base
-        String caminhoPdf = System.getProperty("user.home") + "/Estetify/recibos/" + 
+        String caminhoPdf = System.getProperty("user.home") + "/SafeSoft/recibos/" + 
             String.format("%d_%s",
                 pagamento.getId(),
                 pagamento.getDataPagamento().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"))

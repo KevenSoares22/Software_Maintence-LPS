@@ -58,18 +58,18 @@ public class ClienteController {
     private void enviarCredenciaisAcesso(Cliente cliente, String senhaTemporaria) {
         String mensagem = String.format(
             "Olá %s,\n\n" +
-            "Suas credenciais de acesso ao sistema Estetify foram criadas:\n\n" +
+            "Suas credenciais de acesso ao sistema SafeSoft foram criadas:\n\n" +
             "Email: %s\n" +
             "Senha: %s\n\n" +
             "Por favor, altere sua senha no primeiro acesso.\n\n" +
             "Atenciosamente,\n" +
-            "Equipe Estetify",
+            "Equipe SafeSoft",
             cliente.getNome(),
             cliente.getEmail(),
             senhaTemporaria
         );
 
-        notificadorEmail.notificar(cliente, "Credenciais de Acesso - Estetify", mensagem);
+        notificadorEmail.notificar(cliente, "Credenciais de Acesso - SafeSoft", mensagem);
     }
     
     public void atualizar(int id, String nome, String email, String senha, String cpf, TipoSexo sexo, String dataNascimento, String telefone, String endereco, String historicoTecnico, int avatar) {
