@@ -21,7 +21,7 @@ public class pnlMeusServicos extends javax.swing.JPanel {
     }
     
     private void configurarComponentes() {
-        lblSubtituloGerenciaTecnicoes.setText("Visualize todas as suas consultas agendadas.");
+        lblSubtituloGerenciaTecnicos.setText("Visualize todas as suas consultas agendadas.");
         
         grdMeusServicos.setShowGrid(false);
         grdMeusServicos.setShowHorizontalLines(true);
@@ -44,8 +44,8 @@ public class pnlMeusServicos extends javax.swing.JPanel {
     private void initComponents() {
 
         lblAvatar = new javax.swing.JLabel();
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         grdMeusServicos = new com.ifcolab.safesoft.components.CustomTable();
 
@@ -56,17 +56,17 @@ public class pnlMeusServicos extends javax.swing.JPanel {
         add(lblAvatar);
         lblAvatar.setBounds(30, 450, 170, 0);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Minhas Servicos");
-        add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Minhas Servicos");
+        add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Personalize seu perfil ao seu gosto.");
-        add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 550, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Personalize seu perfil ao seu gosto.");
+        add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 550, 17);
 
         grdMeusServicos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -91,7 +91,7 @@ public class pnlMeusServicos extends javax.swing.JPanel {
     private com.ifcolab.safesoft.components.CustomTable grdMeusServicos;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAvatar;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
     // End of variables declaration//GEN-END:variables
 }

@@ -188,7 +188,7 @@ public class PnlAgenda extends javax.swing.JPanel {
         JLabel lblStatus = new JLabel(servico.getStatus().toString());
         JLabel lblCliente = new JLabel("Cliente: " + servico.getCliente().getNome());
         JLabel lblTecnico = new JLabel("Tecnico: " + servico.getTecnico().getNome());
-        JLabel lblsuporte = new JLabel("suporte: " + servico.getsuporte().getNome());
+        JLabel lblSuporte = new JLabel("Suporte: " + servico.getSuporte().getNome());
         
         Font labelFont = new Font("Fira Sans", Font.PLAIN, 11);
         Font statusFont = new Font("Fira Sans", Font.BOLD, 11);
@@ -196,7 +196,7 @@ public class PnlAgenda extends javax.swing.JPanel {
         lblStatus.setFont(statusFont);
         lblCliente.setFont(labelFont);
         lblTecnico.setFont(labelFont);
-        lblsuporte.setFont(labelFont);
+        lblSuporte.setFont(labelFont);
         
         switch (servico.getStatus()) {
             case AGENDADA:
@@ -219,7 +219,7 @@ public class PnlAgenda extends javax.swing.JPanel {
         panel.add(Box.createRigidArea(new Dimension(0, 2)));
         panel.add(lblTecnico);
         panel.add(Box.createRigidArea(new Dimension(0, 2)));
-        panel.add(lblsuporte);
+        panel.add(lblSuporte);
         
         if (!servico.getItens().isEmpty()) {
             panel.add(Box.createRigidArea(new Dimension(0, 2)));

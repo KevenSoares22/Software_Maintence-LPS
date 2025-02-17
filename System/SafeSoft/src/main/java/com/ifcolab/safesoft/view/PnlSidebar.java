@@ -21,8 +21,8 @@ public class PnlSidebar extends javax.swing.JPanel {
 
      private void configurarVisualizacao() {
         // Esconde todos os botões inicialmente
-        btnGerenciarTecnicoes.setVisible(false);
-        btnGerenciarsuportes.setVisible(false);
+        btnGerenciarTecnicos.setVisible(false);
+        btnGerenciarSuportes.setVisible(false);
         btnGerenciaClientes.setVisible(false);
         btnGerenciarRecepcionistas.setVisible(false);
         btnGerenciarItens.setVisible(false);
@@ -44,8 +44,8 @@ public class PnlSidebar extends javax.swing.JPanel {
         if (authController.isAdmin()) {
             btnAgenda.setVisible(true);
             btnPerfil.setVisible(true);
-            btnGerenciarTecnicoes.setVisible(true);
-            btnGerenciarsuportes.setVisible(true);
+            btnGerenciarTecnicos.setVisible(true);
+            btnGerenciarSuportes.setVisible(true);
             btnGerenciaClientes.setVisible(true);
             btnGerenciarRecepcionistas.setVisible(true);
             btnGerenciarItens.setVisible(true);
@@ -61,7 +61,7 @@ public class PnlSidebar extends javax.swing.JPanel {
             btnFeedbackCliente.setVisible(true);
             btnPerfil.setVisible(true);
         }
-        else if (authController.isTecnico() || authController.issuporte()) {
+        else if (authController.isTecnico() || authController.isSuporte()) {
             btnAgenda.setVisible(true);
             btnPerfil.setVisible(true);
             btnFeedbacks.setVisible(true);
@@ -86,9 +86,9 @@ public class PnlSidebar extends javax.swing.JPanel {
         btnAgenda = new com.ifcolab.safesoft.components.CustomButton();
         btnConfiguracoes = new com.ifcolab.safesoft.components.CustomButton();
         btnGerenciaClientes = new com.ifcolab.safesoft.components.CustomButton();
-        btnGerenciarTecnicoes = new com.ifcolab.safesoft.components.CustomButton();
+        btnGerenciarTecnicos = new com.ifcolab.safesoft.components.CustomButton();
         btnPerfil = new com.ifcolab.safesoft.components.CustomButton();
-        btnGerenciarsuportes = new com.ifcolab.safesoft.components.CustomButton();
+        btnGerenciarSuportes = new com.ifcolab.safesoft.components.CustomButton();
         btnMeusServicos = new com.ifcolab.safesoft.components.CustomButton();
         btnFeedbackCliente = new com.ifcolab.safesoft.components.CustomButton();
         btnFeedbacks = new com.ifcolab.safesoft.components.CustomButton();
@@ -140,14 +140,14 @@ public class PnlSidebar extends javax.swing.JPanel {
         add(btnGerenciaClientes);
         btnGerenciaClientes.setBounds(10, 240, 230, 40);
 
-        btnGerenciarTecnicoes.setText("Gerenciar Tecnicoes");
-        btnGerenciarTecnicoes.addActionListener(new java.awt.event.ActionListener() {
+        btnGerenciarTecnicos.setText("Gerenciar Tecnicos");
+        btnGerenciarTecnicos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerenciarTecnicoesActionPerformed(evt);
+                btnGerenciarTecnicosActionPerformed(evt);
             }
         });
-        add(btnGerenciarTecnicoes);
-        btnGerenciarTecnicoes.setBounds(10, 390, 230, 40);
+        add(btnGerenciarTecnicos);
+        btnGerenciarTecnicos.setBounds(10, 390, 230, 40);
 
         btnPerfil.setText("Perfil");
         btnPerfil.addActionListener(new java.awt.event.ActionListener() {
@@ -158,14 +158,14 @@ public class PnlSidebar extends javax.swing.JPanel {
         add(btnPerfil);
         btnPerfil.setBounds(10, 140, 230, 40);
 
-        btnGerenciarsuportes.setText("Gerenciar suportes");
-        btnGerenciarsuportes.addActionListener(new java.awt.event.ActionListener() {
+        btnGerenciarSuportes.setText("Gerenciar Suportes");
+        btnGerenciarSuportes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerenciarsuportesActionPerformed(evt);
+                btnGerenciarSuportesActionPerformed(evt);
             }
         });
-        add(btnGerenciarsuportes);
-        btnGerenciarsuportes.setBounds(10, 440, 230, 40);
+        add(btnGerenciarSuportes);
+        btnGerenciarSuportes.setBounds(10, 440, 230, 40);
 
         btnMeusServicos.setText("Minhas Servicos");
         btnMeusServicos.addActionListener(new java.awt.event.ActionListener() {
@@ -273,11 +273,11 @@ public class PnlSidebar extends javax.swing.JPanel {
         dialog.setVisible(true);
     }//GEN-LAST:event_btnFeedbacksActionPerformed
 
-    private void btnGerenciarTecnicoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarTecnicoesActionPerformed
+    private void btnGerenciarTecnicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarTecnicosActionPerformed
         DlgGerenciaTecnico dialog = new DlgGerenciaTecnico(null, true);
         dialog.setLocationRelativeTo(parentFrame);
         dialog.setVisible(true);
-    }//GEN-LAST:event_btnGerenciarTecnicoesActionPerformed
+    }//GEN-LAST:event_btnGerenciarTecnicosActionPerformed
 
     private void btnGerenciaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciaClientesActionPerformed
         DlgGerenciaCliente dialog = new DlgGerenciaCliente(null, true);
@@ -285,11 +285,11 @@ public class PnlSidebar extends javax.swing.JPanel {
         dialog.setVisible(true);
     }//GEN-LAST:event_btnGerenciaClientesActionPerformed
 
-    private void btnGerenciarsuportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarsuportesActionPerformed
-        DlgGerenciasuporte dialog = new DlgGerenciasuporte(null, true);
+    private void btnGerenciarSuportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarSuportesActionPerformed
+        DlgGerenciaSuporte dialog = new DlgGerenciaSuporte(null, true);
         dialog.setLocationRelativeTo(parentFrame);
         dialog.setVisible(true);
-    }//GEN-LAST:event_btnGerenciarsuportesActionPerformed
+    }//GEN-LAST:event_btnGerenciarSuportesActionPerformed
 
     private void btnAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendaActionPerformed
 
@@ -368,8 +368,8 @@ public class PnlSidebar extends javax.swing.JPanel {
     private com.ifcolab.safesoft.components.CustomButton btnFeedbacksAdmin;
     private com.ifcolab.safesoft.components.CustomButton btnFeedbackCliente;
     private com.ifcolab.safesoft.components.CustomButton btnGerenciarAdmins;
-    private com.ifcolab.safesoft.components.CustomButton btnGerenciarsuportes;
-    private com.ifcolab.safesoft.components.CustomButton btnGerenciarTecnicoes;
+    private com.ifcolab.safesoft.components.CustomButton btnGerenciarSuportes;
+    private com.ifcolab.safesoft.components.CustomButton btnGerenciarTecnicos;
     private com.ifcolab.safesoft.components.CustomButton btnGerenciaClientes;
     private com.ifcolab.safesoft.components.CustomButton btnGerenciarPagamentos;
     private com.ifcolab.safesoft.components.CustomButton btnGerenciarItens;

@@ -64,7 +64,7 @@ public class DlgFeedback extends javax.swing.JDialog {
 
         lblLogo = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
         btnExcluir = new com.ifcolab.safesoft.components.PrimaryCustomButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         grdFeedbacks = new com.ifcolab.safesoft.components.CustomTable();
@@ -85,11 +85,11 @@ public class DlgFeedback extends javax.swing.JDialog {
         getContentPane().add(lblTitulo);
         lblTitulo.setBounds(140, 20, 230, 50);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Visualize todos os feedbacks dos clientes.");
-        getContentPane().add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(140, 60, 500, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Visualize todos os feedbacks dos clientes.");
+        getContentPane().add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(140, 60, 500, 17);
 
         btnExcluir.setText("Excluir");
         getContentPane().add(btnExcluir);
@@ -132,7 +132,7 @@ public class DlgFeedback extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblBackground;
     private javax.swing.JLabel lblLogo;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlBackground;
     // End of variables declaration//GEN-END:variables

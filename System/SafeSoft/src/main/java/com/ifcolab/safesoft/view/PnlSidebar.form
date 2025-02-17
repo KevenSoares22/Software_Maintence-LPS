@@ -107,7 +107,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="com.ifcolab.safesoft.components.CustomButton" name="btnGerenciarTecnicoes">
+    <Component class="com.ifcolab.safesoft.components.CustomButton" name="btnGerenciarTecnicos">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/estetoscopio.png"/>
@@ -115,7 +115,7 @@
         <Property name="text" type="java.lang.String" value="Gerenciar M&#xe9;dicos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerenciarTecnicoesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerenciarTecnicosActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -139,15 +139,15 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="com.ifcolab.safesoft.components.CustomButton" name="btnGerenciarsuportes">
+    <Component class="com.ifcolab.safesoft.components.CustomButton" name="btnGerenciarSuportes">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/seringa.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Gerenciar suportes"/>
+        <Property name="text" type="java.lang.String" value="Gerenciar Suportes"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerenciarsuportesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerenciarSuportesActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

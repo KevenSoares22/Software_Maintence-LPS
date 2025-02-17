@@ -152,13 +152,13 @@ public class pnlPerfil extends javax.swing.JPanel {
         lblEndereco = new javax.swing.JLabel();
         fEdtTelefone = new com.ifcolab.safesoft.components.CustomFormattedTextField();
         lblTelefone = new javax.swing.JLabel();
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
         lblAvatarTitle = new javax.swing.JLabel();
         fEdtCPF = new com.ifcolab.safesoft.components.CustomFormattedTextField();
         cboSexo = new com.ifcolab.safesoft.components.CustomComboBox();
         lblCPF = new javax.swing.JLabel();
         lblSexo = new javax.swing.JLabel();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
         btnTrocarSenha = new com.ifcolab.safesoft.components.SecondaryCustomButton();
         lblAvatarTitle1 = new javax.swing.JLabel();
 
@@ -246,11 +246,11 @@ public class pnlPerfil extends javax.swing.JPanel {
         add(lblTelefone);
         lblTelefone.setBounds(510, 80, 260, 17);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Perfil");
-        add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Perfil");
+        add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
         lblAvatarTitle.setForeground(new java.awt.Color(51, 51, 51));
         lblAvatarTitle.setText("Trocar senha");
@@ -273,11 +273,11 @@ public class pnlPerfil extends javax.swing.JPanel {
         add(lblSexo);
         lblSexo.setBounds(510, 150, 170, 17);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Personalize seu perfil ao seu gosto.");
-        add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 550, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Personalize seu perfil ao seu gosto.");
+        add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 550, 17);
 
         btnTrocarSenha.setText("Trocar Senha");
         btnTrocarSenha.addActionListener(new java.awt.event.ActionListener() {
@@ -326,8 +326,8 @@ public class pnlPerfil extends javax.swing.JPanel {
     private javax.swing.JLabel lblEndereco;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblSexo;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
     private javax.swing.JLabel lblTelefone;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,7 +1,8 @@
 package com.ifcolab.safesoft.view;
 
-import com.ifcolab.safesoft.controller.suporteController;
-import com.ifcolab.safesoft.model.suporte;
+import com.ifcolab.safesoft.controller.TecnicoController;
+import com.ifcolab.safesoft.model.Tecnico;
+import com.ifcolab.safesoft.model.enums.AreaGestao;
 import com.ifcolab.safesoft.model.enums.TipoSexo;
 import com.ifcolab.safesoft.model.exceptions.ClienteException;
 import com.ifcolab.safesoft.model.exceptions.ValidateException;
@@ -12,34 +13,43 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.text.MaskFormatter;
 
-public class DlgGerenciasuporte extends javax.swing.JDialog {
 
-    private suporteController controller;
-    private int idsuporteEditando;
+public class DlgGerenciaTecnico extends javax.swing.JDialog {
 
+    private TecnicoController controller;
+    private int idTecnicoEditando;
 
-    public DlgGerenciasuporte(java.awt.Frame parent, boolean modal) {
+    
+    public DlgGerenciaTecnico(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
-        controller = new suporteController();
-        idsuporteEditando = -1;
- 
+        controller = new TecnicoController();
+        idTecnicoEditando = -1;
+        
         this.configurarComboBoxes();
         this.adicionarMascaraNosCampos();
         this.habilitarFormulario(false);
         this.limparFormulario();
         
-        grdsuportes.addMouseListener(new java.awt.event.MouseAdapter() {
+        // Adicionar listener de duplo clique
+        grdTecnicos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                grdsuportesMouseClicked(evt);
+                grdTecnicosMouseClicked(evt);
             }
         });
         
-        controller.atualizarTabela(grdsuportes);
+        controller.atualizarTabela(grdTecnicos);
     }
     
     private void configurarComboBoxes() {
+        // Adiciona todas as especializações ao ComboBox
+        cboAreaGestao.removeAllItems();
+        for (AreaGestao esp : AreaGestao.values()) {
+            cboAreaGestao.addItem(esp);
+        }
+        
+        // Configurar ComboBox de Sexo
         cboSexo.removeAllItems();
         for (TipoSexo s : TipoSexo.values()) {
             cboSexo.addItem(s);
@@ -77,6 +87,7 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
         fEdtTelefone.setEnabled(habilitar);
         edtEndereco.setEnabled(habilitar);
         edtcod.setEnabled(habilitar);
+        cboAreaGestao.setEnabled(habilitar);
         btnSalvar.setEnabled(habilitar);
     }
 
@@ -89,29 +100,33 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
         fEdtTelefone.setText("");
         edtEndereco.setText("");
         edtcod.setText("");
+        cboAreaGestao.setSelectedItem(null);
     }
 
-    private void preencherFormulario(suporte suporte) {
+    private void preencherFormulario(Tecnico tecnico) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        
-        edtNome.setText(suporte.getNome());
-        edtEmail.setText(suporte.getEmail());
-        fEdtCPF.setText(suporte.getCpf());
-        cboSexo.setSelectedItem(suporte.getSexo());
-        fEdtDataNascimento.setText(suporte.getDataNascimento().format(formatter));
-        fEdtTelefone.setText(suporte.getTelefone());
-        edtEndereco.setText(suporte.getEndereco());
-        edtcod.setText(suporte.getCod());
+
+        edtNome.setText(tecnico.getNome());
+        edtEmail.setText(tecnico.getEmail());
+        fEdtCPF.setText(tecnico.getCpf());
+        cboSexo.setSelectedItem(tecnico.getSexo());
+        fEdtDataNascimento.setText(tecnico.getDataNascimento().format(formatter));
+        fEdtTelefone.setText(tecnico.getTelefone());
+        edtEndereco.setText(tecnico.getEndereco());
+        edtcod.setText(tecnico.getCod());
+        cboAreaGestao.setSelectedItem(tecnico.getAreagestao());
     }
 
     private Object getObjetoSelecionadoNaGrid() {
-        int rowCliked = grdsuportes.getSelectedRow();
+        int rowCliked = grdTecnicos.getSelectedRow();
         Object obj = null;
         if (rowCliked >= 0) {
-            obj = grdsuportes.getModel().getValueAt(rowCliked, -1);
+            obj = grdTecnicos.getModel().getValueAt(rowCliked, -1);
         }
         return obj;
     }
+
+
 
 
     @SuppressWarnings("unchecked")
@@ -126,24 +141,26 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
         lblTelefone = new javax.swing.JLabel();
         lblEndereco = new javax.swing.JLabel();
         lblcod = new javax.swing.JLabel();
+        lblAreaGestao = new javax.swing.JLabel();
+        fEdtCPF = new com.ifcolab.safesoft.components.CustomFormattedTextField();
+        fEdtDataNascimento = new com.ifcolab.safesoft.components.CustomFormattedTextField();
+        fEdtTelefone = new com.ifcolab.safesoft.components.CustomFormattedTextField();
         edtEmail = new com.ifcolab.safesoft.components.CustomTextField();
         edtNome = new com.ifcolab.safesoft.components.CustomTextField();
-        fEdtDataNascimento = new com.ifcolab.safesoft.components.CustomFormattedTextField();
-        fEdtCPF = new com.ifcolab.safesoft.components.CustomFormattedTextField();
-        fEdtTelefone = new com.ifcolab.safesoft.components.CustomFormattedTextField();
         edtcod = new com.ifcolab.safesoft.components.CustomTextField();
         edtEndereco = new com.ifcolab.safesoft.components.CustomTextField();
         btnAdicionar = new com.ifcolab.safesoft.components.PrimaryCustomButton();
         btnSalvar = new com.ifcolab.safesoft.components.SecondaryCustomButton();
         btnEditar = new com.ifcolab.safesoft.components.SecondaryCustomButton();
         btnRemover = new com.ifcolab.safesoft.components.SecondaryCustomButton();
+        cboAreaGestao = new com.ifcolab.safesoft.components.CustomComboBox();
         cboSexo = new com.ifcolab.safesoft.components.CustomComboBox();
-        tmsuportes = new javax.swing.JScrollPane();
-        grdsuportes = new com.ifcolab.safesoft.components.CustomTable();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
-        lblBackgroundTabela = new javax.swing.JLabel();
+        tmTecnicos = new javax.swing.JScrollPane();
+        grdTecnicos = new com.ifcolab.safesoft.components.CustomTable();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
         lblBackgroundCadastro = new javax.swing.JLabel();
+        lblBackgroundTabela = new javax.swing.JLabel();
         lblBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -153,42 +170,59 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
         lblCPF.setForeground(new java.awt.Color(51, 51, 51));
         lblCPF.setText("CPF");
         getContentPane().add(lblCPF);
-        lblCPF.setBounds(890, 140, 50, 17);
+        lblCPF.setBounds(890, 120, 50, 17);
 
         lblNome.setForeground(new java.awt.Color(51, 51, 51));
         lblNome.setText("Nome");
         getContentPane().add(lblNome);
-        lblNome.setBounds(70, 140, 130, 17);
+        lblNome.setBounds(70, 120, 170, 17);
 
         lblEmail.setForeground(new java.awt.Color(51, 51, 51));
         lblEmail.setText("Email");
         getContentPane().add(lblEmail);
-        lblEmail.setBounds(480, 140, 130, 17);
+        lblEmail.setBounds(530, 120, 240, 17);
 
         lblSexo.setForeground(new java.awt.Color(51, 51, 51));
         lblSexo.setText("Sexo");
         getContentPane().add(lblSexo);
-        lblSexo.setBounds(1140, 140, 50, 17);
+        lblSexo.setBounds(1140, 120, 50, 17);
 
         lblDataNascimento.setForeground(new java.awt.Color(51, 51, 51));
         lblDataNascimento.setText("Data de Nascimento");
         getContentPane().add(lblDataNascimento);
-        lblDataNascimento.setBounds(70, 210, 170, 17);
+        lblDataNascimento.setBounds(70, 190, 140, 17);
 
         lblTelefone.setForeground(new java.awt.Color(51, 51, 51));
         lblTelefone.setText("Telefone");
         getContentPane().add(lblTelefone);
-        lblTelefone.setBounds(720, 210, 140, 17);
+        lblTelefone.setBounds(720, 190, 140, 17);
 
         lblEndereco.setForeground(new java.awt.Color(51, 51, 51));
         lblEndereco.setText("Endereço");
         getContentPane().add(lblEndereco);
-        lblEndereco.setBounds(300, 210, 240, 17);
+        lblEndereco.setBounds(310, 190, 140, 17);
 
         lblcod.setForeground(new java.awt.Color(51, 51, 51));
         lblcod.setText("cod");
         getContentPane().add(lblcod);
-        lblcod.setBounds(1030, 210, 140, 17);
+        lblcod.setBounds(1030, 190, 140, 17);
+
+        lblAreaGestao.setForeground(new java.awt.Color(51, 51, 51));
+        lblAreaGestao.setText("Especialização");
+        getContentPane().add(lblAreaGestao);
+        lblAreaGestao.setBounds(70, 260, 140, 17);
+
+        fEdtCPF.setText("CPF");
+        getContentPane().add(fEdtCPF);
+        fEdtCPF.setBounds(880, 140, 230, 38);
+
+        fEdtDataNascimento.setText("Data de Nascimento");
+        getContentPane().add(fEdtDataNascimento);
+        fEdtDataNascimento.setBounds(60, 210, 210, 38);
+
+        fEdtTelefone.setText("Telefone");
+        getContentPane().add(fEdtTelefone);
+        fEdtTelefone.setBounds(710, 210, 280, 38);
 
         edtEmail.setText("E-mail");
         edtEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -197,7 +231,7 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
             }
         });
         getContentPane().add(edtEmail);
-        edtEmail.setBounds(470, 160, 380, 40);
+        edtEmail.setBounds(520, 140, 330, 40);
 
         edtNome.setText("Nome");
         edtNome.addActionListener(new java.awt.event.ActionListener() {
@@ -206,19 +240,7 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
             }
         });
         getContentPane().add(edtNome);
-        edtNome.setBounds(60, 160, 380, 40);
-
-        fEdtDataNascimento.setText("Data de Nascimento");
-        getContentPane().add(fEdtDataNascimento);
-        fEdtDataNascimento.setBounds(60, 230, 200, 38);
-
-        fEdtCPF.setText("CPF");
-        getContentPane().add(fEdtCPF);
-        fEdtCPF.setBounds(880, 160, 230, 38);
-
-        fEdtTelefone.setText("Telefone");
-        getContentPane().add(fEdtTelefone);
-        fEdtTelefone.setBounds(710, 230, 280, 38);
+        edtNome.setBounds(60, 140, 430, 40);
 
         edtcod.setText("cod");
         edtcod.addActionListener(new java.awt.event.ActionListener() {
@@ -227,7 +249,7 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
             }
         });
         getContentPane().add(edtcod);
-        edtcod.setBounds(1020, 230, 210, 40);
+        edtcod.setBounds(1020, 210, 210, 40);
 
         edtEndereco.setText("Endereço");
         edtEndereco.addActionListener(new java.awt.event.ActionListener() {
@@ -236,7 +258,7 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
             }
         });
         getContentPane().add(edtEndereco);
-        edtEndereco.setBounds(290, 230, 390, 40);
+        edtEndereco.setBounds(300, 210, 380, 40);
 
         btnAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/addsquare.png"))); // NOI18N
         btnAdicionar.setText(" Adicionar");
@@ -277,10 +299,12 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
         });
         getContentPane().add(btnRemover);
         btnRemover.setBounds(480, 80, 170, 30);
+        getContentPane().add(cboAreaGestao);
+        cboAreaGestao.setBounds(60, 280, 330, 44);
         getContentPane().add(cboSexo);
-        cboSexo.setBounds(1130, 160, 160, 44);
+        cboSexo.setBounds(1130, 140, 160, 44);
 
-        grdsuportes.setModel(new javax.swing.table.DefaultTableModel(
+        grdTecnicos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -291,35 +315,35 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
 
             }
         ));
-        grdsuportes.addMouseListener(new java.awt.event.MouseAdapter() {
+        grdTecnicos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                grdsuportesMouseClicked(evt);
+                grdTecnicosMouseClicked(evt);
             }
         });
-        tmsuportes.setViewportView(grdsuportes);
+        tmTecnicos.setViewportView(grdTecnicos);
 
-        getContentPane().add(tmsuportes);
-        tmsuportes.setBounds(40, 370, 1260, 420);
+        getContentPane().add(tmTecnicos);
+        tmTecnicos.setBounds(40, 380, 1260, 420);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Controle as informações das suportes e dados pessoais.");
-        getContentPane().add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 720, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Adicione, edite ou remova informações dos tecnicos, incluindo especialidades e dados de contato.");
+        getContentPane().add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 780, 17);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Gerenciar suportes");
-        getContentPane().add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
-
-        lblBackgroundTabela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundTableModel.png"))); // NOI18N
-        getContentPane().add(lblBackgroundTabela);
-        lblBackgroundTabela.setBounds(-10, 330, 1350, 500);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Gerenciar Tecnicos");
+        getContentPane().add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
         lblBackgroundCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundCrud.png"))); // NOI18N
         getContentPane().add(lblBackgroundCadastro);
         lblBackgroundCadastro.setBounds(-10, 60, 1330, 290);
+
+        lblBackgroundTabela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundTableModel.png"))); // NOI18N
+        getContentPane().add(lblBackgroundTabela);
+        lblBackgroundTabela.setBounds(-10, 340, 1390, 500);
 
         lblBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.png"))); // NOI18N
         lblBackground.setText("jLabel3");
@@ -350,60 +374,23 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
         this.habilitarFormulario(true);
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        suporte suporteEditando = (suporte) this.getObjetoSelecionadoNaGrid();
-
-        if (suporteEditando == null)
-        JOptionPane.showMessageDialog(this, "Primeiro selecione um registro na tabela.");
-        else {
-            this.limparFormulario();
-            this.habilitarFormulario(true);
-            this.preencherFormulario(suporteEditando);
-            this.idsuporteEditando = suporteEditando.getId();
-        }      
-    }//GEN-LAST:event_btnEditarActionPerformed
-
-    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
-         suporte suporteExcluido = (suporte) this.getObjetoSelecionadoNaGrid();
-
-        if (suporteExcluido == null)
-        JOptionPane.showMessageDialog(this, "Primeiro selecione um registro na tabela.");
-        else {
-            int response = JOptionPane.showConfirmDialog(null,
-                "Deseja excluir a suporte \n("
-                + suporteExcluido.getNome() + ", "
-                + suporteExcluido.getCpf() + ") ?",
-                "Confirmar exclusão",
-                JOptionPane.OK_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE);
-            if (response == JOptionPane.OK_OPTION) {
-                try {
-                    controller.excluir(suporteExcluido);
-                    controller.atualizarTabela(grdsuportes);
-                    JOptionPane.showMessageDialog(this, "Exclusão feita com sucesso!");
-                } catch (ClienteException ex) {
-                    JOptionPane.showMessageDialog(this, ex.getMessage());
-                }
-            }
-        }
-    }//GEN-LAST:event_btnRemoverActionPerformed
-
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         try {
-            if (idsuporteEditando > 0) {
-                suporte suporteAtual = controller.find(idsuporteEditando);
+            if (idTecnicoEditando > 0) {
+                Tecnico tecnicoAtual = controller.find(idTecnicoEditando);
                 controller.atualizar(
-                    idsuporteEditando,
+                    idTecnicoEditando,
                     edtNome.getText(),
                     edtEmail.getText(),
-                    suporteAtual.getSenha(),
+                    tecnicoAtual.getSenha(),
                     fEdtCPF.getText(),
                     (TipoSexo) cboSexo.getSelectedItem(),
                     fEdtDataNascimento.getText(),
                     fEdtTelefone.getText(),
                     edtEndereco.getText(),
                     edtcod.getText(),
-                    suporteAtual.getAvatar()
+                    (AreaGestao) cboAreaGestao.getSelectedItem(),
+                    tecnicoAtual.getAvatar()
                 );
             } else {
                 controller.cadastrar(
@@ -415,12 +402,13 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
                     fEdtTelefone.getText(),
                     edtEndereco.getText(),
                     edtcod.getText(),
+                    (AreaGestao) cboAreaGestao.getSelectedItem(),
                     1
                 );
             }
 
-            this.idsuporteEditando = -1;
-            controller.atualizarTabela(grdsuportes);
+            this.idTecnicoEditando = -1;
+            controller.atualizarTabela(grdTecnicos);
             this.habilitarFormulario(false);
             this.limparFormulario();
 
@@ -429,11 +417,50 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_btnSalvarActionPerformed
 
-    private void grdsuportesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grdsuportesMouseClicked
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        Tecnico tecnicoEditando = (Tecnico) this.getObjetoSelecionadoNaGrid();
+
+        if (tecnicoEditando == null)
+        JOptionPane.showMessageDialog(this, "Primeiro selecione um registro na tabela.");
+        else {
+            this.limparFormulario();
+            this.habilitarFormulario(true);
+            this.preencherFormulario(tecnicoEditando);
+            this.idTecnicoEditando = tecnicoEditando.getId();
+        }        
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
+        Tecnico tecnicoExcluido = (Tecnico) this.getObjetoSelecionadoNaGrid();
+
+        if (tecnicoExcluido == null)
+        JOptionPane.showMessageDialog(this, "Primeiro selecione um registro na tabela.");
+        else {
+            int response = JOptionPane.showConfirmDialog(null,
+                "Deseja excluir o Tecnico \n("
+                + tecnicoExcluido.getNome() + ", "
+                + tecnicoExcluido.getCpf() + ") ?",
+                "Confirmar exclusão",
+                JOptionPane.OK_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+            if (response == JOptionPane.OK_OPTION) {
+                try {
+                    controller.excluir(tecnicoExcluido);
+                    controller.atualizarTabela(grdTecnicos);
+                    JOptionPane.showMessageDialog(this, "Exclusão feita com sucesso!");
+                } catch (ClienteException ex) {
+                    JOptionPane.showMessageDialog(this, ex.getMessage());
+                }
+            }
+        }
+    }//GEN-LAST:event_btnRemoverActionPerformed
+
+    private void grdTecnicosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grdTecnicosMouseClicked
         if (evt.getClickCount() == 2) {
             btnEditarActionPerformed(null);
         }
-    }//GEN-LAST:event_grdsuportesMouseClicked
+    }//GEN-LAST:event_grdTecnicosMouseClicked
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -441,6 +468,7 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
     private com.ifcolab.safesoft.components.SecondaryCustomButton btnEditar;
     private com.ifcolab.safesoft.components.SecondaryCustomButton btnRemover;
     private com.ifcolab.safesoft.components.SecondaryCustomButton btnSalvar;
+    private com.ifcolab.safesoft.components.CustomComboBox cboAreaGestao;
     private com.ifcolab.safesoft.components.CustomComboBox cboSexo;
     private com.ifcolab.safesoft.components.CustomTextField edtcod;
     private com.ifcolab.safesoft.components.CustomTextField edtEmail;
@@ -449,20 +477,21 @@ public class DlgGerenciasuporte extends javax.swing.JDialog {
     private com.ifcolab.safesoft.components.CustomFormattedTextField fEdtCPF;
     private com.ifcolab.safesoft.components.CustomFormattedTextField fEdtDataNascimento;
     private com.ifcolab.safesoft.components.CustomFormattedTextField fEdtTelefone;
-    private com.ifcolab.safesoft.components.CustomTable grdsuportes;
+    private com.ifcolab.safesoft.components.CustomTable grdTecnicos;
     private javax.swing.JLabel lblBackground;
     private javax.swing.JLabel lblBackgroundCadastro;
     private javax.swing.JLabel lblBackgroundTabela;
-    private javax.swing.JLabel lblcod;
     private javax.swing.JLabel lblCPF;
+    private javax.swing.JLabel lblcod;
     private javax.swing.JLabel lblDataNascimento;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEndereco;
+    private javax.swing.JLabel lblAreaGestao;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblSexo;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
     private javax.swing.JLabel lblTelefone;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
-    private javax.swing.JScrollPane tmsuportes;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
+    private javax.swing.JScrollPane tmTecnicos;
     // End of variables declaration//GEN-END:variables
 }

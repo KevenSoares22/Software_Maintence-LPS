@@ -33,7 +33,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="33" red="33" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Selecionar suporte"/>
+        <Property name="text" type="java.lang.String" value="Selecionar Suporte"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -172,9 +172,9 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="com.ifcolab.safesoft.components.CustomComboBox" name="cbxSelecionarsuporte">
+    <Component class="com.ifcolab.safesoft.components.CustomComboBox" name="cbxSelecionarSuporte">
       <Events>
-        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="cbxSelecionarsuportePropertyChange"/>
+        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="cbxSelecionarSuportePropertyChange"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -348,7 +348,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lblSubtituloGerenciaTecnicoes">
+    <Component class="javax.swing.JLabel" name="lblSubtituloGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Fira Sans Medium" size="13" style="0"/>
@@ -364,7 +364,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblTitleGerenciaTecnicoes">
+    <Component class="javax.swing.JLabel" name="lblTitleGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Fira Sans SemiBold" size="18" style="0"/>

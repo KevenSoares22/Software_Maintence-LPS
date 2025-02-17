@@ -189,8 +189,8 @@ public class DlgGerenciaPagamento extends javax.swing.JDialog {
         tmPagamentos = new javax.swing.JScrollPane();
         grdPagamentos = new com.ifcolab.safesoft.components.CustomTable();
         lblBackgroundTabela = new javax.swing.JLabel();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
         lblBackgroundCadastro = new javax.swing.JLabel();
         lblBackground = new javax.swing.JLabel();
 
@@ -302,17 +302,17 @@ public class DlgGerenciaPagamento extends javax.swing.JDialog {
         getContentPane().add(lblBackgroundTabela);
         lblBackgroundTabela.setBounds(-10, 340, 1390, 500);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Administre os dados dos pagamentos, incluindo valor, método de pagamento e detalhes.");
-        getContentPane().add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 760, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Administre os dados dos pagamentos, incluindo valor, método de pagamento e detalhes.");
+        getContentPane().add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 760, 17);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Gerenciar Pagamentos");
-        getContentPane().add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Gerenciar Pagamentos");
+        getContentPane().add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
         lblBackgroundCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundCrud.png"))); // NOI18N
         getContentPane().add(lblBackgroundCadastro);
@@ -435,8 +435,8 @@ public class DlgGerenciaPagamento extends javax.swing.JDialog {
     private javax.swing.JLabel lblDetalhes;
     private javax.swing.JLabel lblMetodoPagamento;
     private javax.swing.JLabel lblStatus;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
     private javax.swing.JLabel lblValor;
     private javax.swing.JScrollPane tmPagamentos;
     private com.ifcolab.safesoft.components.CustomTextArea txtDetalhes;

@@ -1,7 +1,7 @@
 package com.ifcolab.safesoft.view;
 
 import com.ifcolab.safesoft.controller.ServicoController;
-import com.ifcolab.safesoft.controller.suporteController;
+import com.ifcolab.safesoft.controller.SuporteController;
 import com.ifcolab.safesoft.controller.TecnicoController;
 import com.ifcolab.safesoft.controller.ClienteController;
 import com.ifcolab.safesoft.controller.ItemController;
@@ -26,7 +26,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
     private final ServicoController controller;
     private final ClienteController clienteController;
     private final TecnicoController tecnicoController;
-    private final suporteController clienteController;
+    private final SuporteController suporteController;
     private final ItemController itemController;
     private int idServicoEditando;
     private boolean consultaCadastrada;
@@ -41,7 +41,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
         controller = new ServicoController();
         clienteController = new ClienteController();
         tecnicoController = new TecnicoController();
-        clienteController = new suporteController();
+        suporteController = new SuporteController();
         itemController = new ItemController();
         
         try {
@@ -104,9 +104,9 @@ public class DlgNovoServico extends javax.swing.JDialog {
         });
         
 
-        cbxSelecionarsuporte.removeAllItems();
-        clienteController.findAll().forEach(cliente -> {
-            cbxSelecionarsuporte.addItem(cliente);
+        cbxSelecionarSuporte.removeAllItems();
+        suporteController.findAll().forEach(suporte -> {
+            cbxSelecionarSuporte.addItem(suporte);
         });
         
         cbxSelecionarCliente.removeAllItems();
@@ -123,7 +123,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
     private void habilitarFormulario(boolean habilitar) {
         cbxSelecionarCliente.setEnabled(habilitar);
         cbxSelecionarTecnico.setEnabled(habilitar);
-        cbxSelecionarsuporte.setEnabled(habilitar);
+        cbxSelecionarSuporte.setEnabled(habilitar);
         cbxSelecionarItem.setEnabled(habilitar);
         fEdtData.setEnabled(habilitar);
         fEdtHora.setEnabled(habilitar);
@@ -136,7 +136,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
     private void limparFormulario() {
         cbxSelecionarCliente.setSelectedIndex(-1);
         cbxSelecionarTecnico.setSelectedIndex(-1);
-        cbxSelecionarsuporte.setSelectedIndex(-1);
+        cbxSelecionarSuporte.setSelectedIndex(-1);
         cbxSelecionarItem.setSelectedIndex(-1);
         fEdtData.setText("");
         fEdtHora.setText("");
@@ -151,7 +151,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
         this.idServicoEditando = servico.getId();
         cbxSelecionarCliente.setSelectedItem(servico.getCliente());
         cbxSelecionarTecnico.setSelectedItem(servico.getTecnico());
-        cbxSelecionarsuporte.setSelectedItem(servico.getsuporte());
+        cbxSelecionarSuporte.setSelectedItem(servico.getSuporte());
         
         // Formata data e hora
         fEdtData.setText(servico.getDataHora().format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy")));
@@ -198,7 +198,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
         fEdtHora = new com.ifcolab.safesoft.components.CustomFormattedTextField();
         fEdtData = new com.ifcolab.safesoft.components.CustomFormattedTextField();
         cbxSelecionarItem = new com.ifcolab.safesoft.components.CustomComboBox();
-        cbxSelecionarsuporte = new com.ifcolab.safesoft.components.CustomComboBox();
+        cbxSelecionarSuporte = new com.ifcolab.safesoft.components.CustomComboBox();
         cbxSelecionarTecnico = new com.ifcolab.safesoft.components.CustomComboBox();
         cbxSelecionarCliente = new com.ifcolab.safesoft.components.CustomComboBox();
         btnAdicionarItem = new com.ifcolab.safesoft.components.PrimaryCustomButton();
@@ -211,8 +211,8 @@ public class DlgNovoServico extends javax.swing.JDialog {
         lstItens = new javax.swing.JList<>();
         tmServicos = new javax.swing.JScrollPane();
         grdServicos = new com.ifcolab.safesoft.components.CustomTable();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
         lblBackgroundTabela = new javax.swing.JLabel();
         lblBackgroundCadastro = new javax.swing.JLabel();
         lblBackground = new javax.swing.JLabel();
@@ -222,7 +222,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
         getContentPane().setLayout(null);
 
         lblCPF.setForeground(new java.awt.Color(51, 51, 51));
-        lblCPF.setText("Selecionar suporte");
+        lblCPF.setText("Selecionar Suporte");
         getContentPane().add(lblCPF);
         lblCPF.setBounds(710, 120, 190, 17);
 
@@ -283,13 +283,13 @@ public class DlgNovoServico extends javax.swing.JDialog {
         getContentPane().add(cbxSelecionarItem);
         cbxSelecionarItem.setBounds(980, 140, 250, 44);
 
-        cbxSelecionarsuporte.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        cbxSelecionarSuporte.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                cbxSelecionarsuportePropertyChange(evt);
+                cbxSelecionarSuportePropertyChange(evt);
             }
         });
-        getContentPane().add(cbxSelecionarsuporte);
-        cbxSelecionarsuporte.setBounds(700, 140, 250, 44);
+        getContentPane().add(cbxSelecionarSuporte);
+        cbxSelecionarSuporte.setBounds(700, 140, 250, 44);
 
         cbxSelecionarTecnico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -393,17 +393,17 @@ public class DlgNovoServico extends javax.swing.JDialog {
         getContentPane().add(tmServicos);
         tmServicos.setBounds(40, 366, 1260, 430);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Agende novas consultas vinculando clientes, profissionais e horários disponíveis.");
-        getContentPane().add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 550, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Agende novas consultas vinculando clientes, profissionais e horários disponíveis.");
+        getContentPane().add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 550, 17);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Nova Servico");
-        getContentPane().add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Nova Servico");
+        getContentPane().add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
         lblBackgroundTabela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundTableModel.png"))); // NOI18N
         getContentPane().add(lblBackgroundTabela);
@@ -502,9 +502,9 @@ public class DlgNovoServico extends javax.swing.JDialog {
                     config.getTempoMinimoAntecedenciaMinutos() + " minutos de antecedência");
             }
             
-            Cliente Cliente = (Cliente) cbxSelecionarCliente.getSelectedItem();
+            Cliente cliente = (Cliente) cbxSelecionarCliente.getSelectedItem();
             Tecnico tecnico = (Tecnico) cbxSelecionarTecnico.getSelectedItem();
-            suporte cliente = (suporte) cbxSelecionarsuporte.getSelectedItem();
+            Suporte suporte = (Suporte) cbxSelecionarSuporte.getSelectedItem();
             String observacoes = txtObeservacoes.getText();
             
             if (idServicoEditando > 0) {
@@ -512,9 +512,9 @@ public class DlgNovoServico extends javax.swing.JDialog {
                     idServicoEditando,
                     dataHora,
                     observacoes,
-                        Cliente,
-                        tecnico,
                         cliente,
+                        tecnico,
+                        suporte,
                     itensSelecionados
                 );
                 consultaAlterada = true;
@@ -522,9 +522,9 @@ public class DlgNovoServico extends javax.swing.JDialog {
                 controller.cadastrar(
                     dataHora,
                     observacoes,
-                        Cliente,
-                        tecnico,
                         cliente,
+                        tecnico,
+                        suporte,
                     itensSelecionados
                 );
                 consultaCadastrada = true;
@@ -581,9 +581,9 @@ public class DlgNovoServico extends javax.swing.JDialog {
 
     }//GEN-LAST:event_cbxSelecionarTecnicoPropertyChange
 
-    private void cbxSelecionarsuportePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_cbxSelecionarsuportePropertyChange
+    private void cbxSelecionarSuportePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_cbxSelecionarSuportePropertyChange
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbxSelecionarsuportePropertyChange
+    }//GEN-LAST:event_cbxSelecionarSuportePropertyChange
 
     private void grdServicosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_grdServicosMouseClicked
         if (evt.getClickCount() == 2) {
@@ -604,7 +604,7 @@ public class DlgNovoServico extends javax.swing.JDialog {
     private com.ifcolab.safesoft.components.SecondaryCustomButton btnEditar;
     private com.ifcolab.safesoft.components.SecondaryCustomButton btnRemover;
     private com.ifcolab.safesoft.components.SecondaryCustomButton btnSalvar;
-    private com.ifcolab.safesoft.components.CustomComboBox cbxSelecionarsuporte;
+    private com.ifcolab.safesoft.components.CustomComboBox cbxSelecionarSuporte;
     private com.ifcolab.safesoft.components.CustomComboBox cbxSelecionarTecnico;
     private com.ifcolab.safesoft.components.CustomComboBox cbxSelecionarCliente;
     private com.ifcolab.safesoft.components.CustomComboBox cbxSelecionarItem;
@@ -622,8 +622,8 @@ public class DlgNovoServico extends javax.swing.JDialog {
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblObservacoes;
     private javax.swing.JLabel lblItensSelecionados;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
     private javax.swing.JList<Item> lstItens;
     private javax.swing.JScrollPane scrollItens;
     private javax.swing.JScrollPane tmServicos;

@@ -58,7 +58,7 @@ public class DlgRelatorio extends javax.swing.JDialog {
     private void preencherFormulario(Relatorio relatorio) {
         txtResultado.setText(relatorio.getResultado());
         txtObservacoes.setText(relatorio.getObservacoes());
-        lblTitleGerenciaTecnicoes.setText("Editar Relatório");
+        lblTitleGerenciaTecnicos.setText("Editar Relatório");
     }
     
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,8 +135,8 @@ public class DlgRelatorio extends javax.swing.JDialog {
         txtResultado = new com.ifcolab.safesoft.components.CustomTextArea();
         tmRecepcionistas = new javax.swing.JScrollPane();
         grdRecepcionistas = new com.ifcolab.safesoft.components.CustomTable();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
         lblBackgroundTabela = new javax.swing.JLabel();
         lblBackgroundCadastro = new javax.swing.JLabel();
         lblBackground = new javax.swing.JLabel();
@@ -219,17 +219,17 @@ public class DlgRelatorio extends javax.swing.JDialog {
         getContentPane().add(tmRecepcionistas);
         tmRecepcionistas.setBounds(40, 366, 1260, 420);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Organize as informações do item, adicionando resultados e observações");
-        getContentPane().add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 650, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Organize as informações do item, adicionando resultados e observações");
+        getContentPane().add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 650, 17);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Cadastrar Relatorio");
-        getContentPane().add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Cadastrar Relatorio");
+        getContentPane().add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
         lblBackgroundTabela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/backgroundTableModel.png"))); // NOI18N
         getContentPane().add(lblBackgroundTabela);
@@ -262,8 +262,8 @@ public class DlgRelatorio extends javax.swing.JDialog {
     private javax.swing.JLabel lblCliente;
     private javax.swing.JLabel lblItem;
     private javax.swing.JLabel lblResultado;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
     private javax.swing.JScrollPane tmRecepcionistas;
     private com.ifcolab.safesoft.components.CustomTextArea txtObservacoes;
     private com.ifcolab.safesoft.components.CustomTextArea txtResultado;

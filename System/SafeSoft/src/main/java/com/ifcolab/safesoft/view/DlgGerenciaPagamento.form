@@ -240,7 +240,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblSubtituloGerenciaTecnicoes">
+    <Component class="javax.swing.JLabel" name="lblSubtituloGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Fira Sans Medium" size="13" style="0"/>
@@ -256,7 +256,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblTitleGerenciaTecnicoes">
+    <Component class="javax.swing.JLabel" name="lblTitleGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Fira Sans SemiBold" size="18" style="0"/>

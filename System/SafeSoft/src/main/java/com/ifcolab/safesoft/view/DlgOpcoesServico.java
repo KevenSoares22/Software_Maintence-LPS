@@ -81,7 +81,7 @@ public class DlgOpcoesServico extends javax.swing.JDialog {
         adicionarLabel(panel, "Data/Hora: " + controller.getDataHoraFormatada());
         adicionarLabel(panel, "Cliente: " + controller.getNomeCliente());
         adicionarLabel(panel, "Tecnico: " + controller.getNomeTecnico());
-        adicionarLabel(panel, "suporte: " + controller.getNomesuporte());
+        adicionarLabel(panel, "Suporte: " + controller.getNomeSuporte());
         
         List<String> items = controller.getItensFormatados();
         if (!items.isEmpty()) {

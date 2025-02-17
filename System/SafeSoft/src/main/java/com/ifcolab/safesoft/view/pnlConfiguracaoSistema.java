@@ -125,8 +125,8 @@ public class pnlConfiguracaoSistema extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
         lblHorarioFuncionamento1 = new javax.swing.JLabel();
         lblAbertura = new javax.swing.JLabel();
         fEdtHorarioAbertura = new com.ifcolab.safesoft.components.CustomFormattedTextField();
@@ -155,17 +155,17 @@ public class pnlConfiguracaoSistema extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Configurações");
-        add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Configurações");
+        add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Controle as informações do Sistemas.");
-        add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 720, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Controle as informações do Sistemas.");
+        add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 720, 17);
 
         lblHorarioFuncionamento1.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 14)); // NOI18N
         lblHorarioFuncionamento1.setForeground(new java.awt.Color(51, 51, 51));
@@ -299,8 +299,8 @@ public class pnlConfiguracaoSistema extends javax.swing.JPanel {
     private javax.swing.JLabel lblIntervaloServico2;
     private javax.swing.JLabel lblMin1;
     private javax.swing.JLabel lblMin2;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
     private javax.swing.JSpinner spnIntervaloServico;
     private javax.swing.JSpinner spnTempoAntecedencia;
     private javax.swing.JSpinner spnTempoMaxAgendamento;

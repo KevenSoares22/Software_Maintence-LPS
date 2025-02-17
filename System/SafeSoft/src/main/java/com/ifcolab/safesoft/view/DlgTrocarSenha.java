@@ -23,8 +23,8 @@ public class DlgTrocarSenha extends javax.swing.JDialog {
     private void initComponents() {
 
         pnlBackground = new javax.swing.JPanel();
-        lblSubtituloGerenciaTecnicoes = new javax.swing.JLabel();
-        lblTitleGerenciaTecnicoes = new javax.swing.JLabel();
+        lblSubtituloGerenciaTecnicos = new javax.swing.JLabel();
+        lblTitleGerenciaTecnicos = new javax.swing.JLabel();
         lblNome = new javax.swing.JLabel();
         lblTelefone = new javax.swing.JLabel();
         lblTelefone1 = new javax.swing.JLabel();
@@ -42,17 +42,17 @@ public class DlgTrocarSenha extends javax.swing.JDialog {
         pnlBackground.setBackground(new java.awt.Color(255, 255, 255));
         pnlBackground.setLayout(null);
 
-        lblSubtituloGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
-        lblSubtituloGerenciaTecnicoes.setForeground(new java.awt.Color(102, 102, 102));
-        lblSubtituloGerenciaTecnicoes.setText("Troque sua senha e fique ainda mais seguro.");
-        pnlBackground.add(lblSubtituloGerenciaTecnicoes);
-        lblSubtituloGerenciaTecnicoes.setBounds(30, 40, 550, 17);
+        lblSubtituloGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans Medium", 0, 13)); // NOI18N
+        lblSubtituloGerenciaTecnicos.setForeground(new java.awt.Color(102, 102, 102));
+        lblSubtituloGerenciaTecnicos.setText("Troque sua senha e fique ainda mais seguro.");
+        pnlBackground.add(lblSubtituloGerenciaTecnicos);
+        lblSubtituloGerenciaTecnicos.setBounds(30, 40, 550, 17);
 
-        lblTitleGerenciaTecnicoes.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
-        lblTitleGerenciaTecnicoes.setForeground(new java.awt.Color(51, 51, 51));
-        lblTitleGerenciaTecnicoes.setText("Modifique sua senha");
-        pnlBackground.add(lblTitleGerenciaTecnicoes);
-        lblTitleGerenciaTecnicoes.setBounds(30, 20, 210, 22);
+        lblTitleGerenciaTecnicos.setFont(new java.awt.Font("Fira Sans SemiBold", 0, 18)); // NOI18N
+        lblTitleGerenciaTecnicos.setForeground(new java.awt.Color(51, 51, 51));
+        lblTitleGerenciaTecnicos.setText("Modifique sua senha");
+        pnlBackground.add(lblTitleGerenciaTecnicos);
+        lblTitleGerenciaTecnicos.setBounds(30, 20, 210, 22);
 
         lblNome.setForeground(new java.awt.Color(51, 51, 51));
         lblNome.setText("Senha Atual");
@@ -137,10 +137,10 @@ public class DlgTrocarSenha extends javax.swing.JDialog {
     private com.ifcolab.safesoft.components.CustomPasswordField edtNovaSenha;
     private com.ifcolab.safesoft.components.CustomPasswordField edtSenhaAtual;
     private javax.swing.JLabel lblNome;
-    private javax.swing.JLabel lblSubtituloGerenciaTecnicoes;
+    private javax.swing.JLabel lblSubtituloGerenciaTecnicos;
     private javax.swing.JLabel lblTelefone;
     private javax.swing.JLabel lblTelefone1;
-    private javax.swing.JLabel lblTitleGerenciaTecnicoes;
+    private javax.swing.JLabel lblTitleGerenciaTecnicos;
     private javax.swing.JPanel pnlBackground;
     // End of variables declaration//GEN-END:variables
 }

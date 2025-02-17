@@ -259,7 +259,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="tmTecnicoes">
+    <Container class="javax.swing.JScrollPane" name="tmTecnicos">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
@@ -298,7 +298,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblSubtituloGerenciaTecnicoes">
+    <Component class="javax.swing.JLabel" name="lblSubtituloGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Fira Sans Medium" size="13" style="0"/>
@@ -314,7 +314,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblTitleGerenciaTecnicoes">
+    <Component class="javax.swing.JLabel" name="lblTitleGerenciaTecnicos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Fira Sans SemiBold" size="18" style="0"/>

@@ -47,8 +47,8 @@ public class Servico {
     private Tecnico tecnico;
     
     @ManyToOne
-    @JoinColumn(name = "suporte_id")
-    private suporte suporte;
+    @JoinColumn(name = "Suporte_id")
+    private Suporte Suporte;
     
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -63,13 +63,13 @@ public class Servico {
 
     
     public Servico(int id, LocalDateTime dataHora, String observacoes, StatusServico status,
-                   suporte suporte, Tecnico tecnico, Cliente cliente,
+                   Suporte Suporte, Tecnico tecnico, Cliente cliente,
                    List<Item> itens) {
         this.id = id;
         this.dataHora = dataHora;
         this.observacoes = observacoes;
         this.status = status;
-        this.suporte = suporte;
+        this.Suporte = Suporte;
         this.tecnico = tecnico;
         this.cliente = cliente;
         this.itens = itens;
